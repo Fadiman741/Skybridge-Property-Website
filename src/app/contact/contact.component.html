@@ -1,0 +1,44 @@
+<hr style="">
+<div style="max-width:1250px">
+    <div class="container mt-3 contactContent" id="six">
+        <h2>Send me a message!</h2>
+        <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
+
+        <div class="col-lg-6">
+            <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+            <div class="map">
+                <div id="gmapcanvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Cape+Town+Belville&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                </div>
+                <a class="googlehtml" href="https://www.embed-map.com" id="get-mapdata"></a>
+                <style>
+                    #gmapcanvas img.text-marker {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+                    
+                    img {
+                        max-width: none
+                    }
+                </style>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <form class="form" action="https://formsubmit.co/wiskatp2018@gmail.com" method="POST">
+                <label for="fname">Your Name:</label>
+                <input style=" background-color: #eee;color:#ddd" id="name" type="text" class="form-control form-control-lg" placeholder="Name" required>
+                <label for="fname">Email:</label>
+                <input style="  background-color: #eee;color:#ddd" id="email" type="email" class="form-control mt-3" placeholder="Email" required>
+                <input type="hidden" name="_next" value="thankyou.html">
+                <div class="mb-3 mt-3">
+                    <label for="fname">Message:</label>
+                    <textarea style="   background-color: #eee;color:#ddd" id="message" class="form-control" rows="5" id="comment" name="text" placeholder="Type your message" required></textarea>
+                </div>
+            </form>
+            <button type="submit" class="Contactme-btn">Send</button>
+        </div>
+    </div>
+</div>
+<div>
+    <app-footer></app-footer>
+</div>

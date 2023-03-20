@@ -1,0 +1,87 @@
+.container {
+    background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 90vh;
+    font-weight: 100;
+}
+
+.container .buttons {
+    margin: auto;
+    padding-top: 10%;
+    display: flex;
+}
+
+.container .buttons button {
+    background-color: #f0438e;
+    top: 30%;
+    border: none;
+    color: white;
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .services {
+    width: 70%;
+    border: 3px solid #f0438e;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+}
+
+.container .services .items {
+    margin-top: 5%;
+    display: flex;
+    width: 70%;
+    padding: 20px;
+}
+
+.container .services button {
+    background-color: #f0438e;
+    color: white;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .search {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.search i {
+    position: absolute;
+    padding: 10px
+}
+
+.container .search .select {
+    height: 35px;
+    width: 80%;
+    border: none;
+}
+
+.container .search .submit {
+    height: 37px;
+    width: 15%;
+    background-color: #f0438e;
+    color: White;
+    border: none;
+}

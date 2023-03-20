@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: auto;
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

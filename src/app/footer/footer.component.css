@@ -1,0 +1,62 @@
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #f0438e;
+    color: white;
+    height: 280px;
+}
+
+.footer-column {
+    float: left;
+    width: 23%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+    font-family: arial;
+}
+
+.fa {
+    padding-right: 10px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer-column li {
+    margin-top: 15px;
+    list-style-type: none;
+    text-align: left;
+    margin-left: 3%;
+}
+
+.footer-column h2 {
+    text-align: left;
+    margin-left: 3%;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        text-align: center;
+        background-color: black;
+        color: #aaa;
+    }
+    .footer-column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        margin: 2%;
+        font-family: arial;
+        height: 180px;
+    }
+    .footer-column li {
+        margin-top: 3%;
+        list-style-type: none;
+        text-align: left;
+        margin-left: 3%;
+    }
+}

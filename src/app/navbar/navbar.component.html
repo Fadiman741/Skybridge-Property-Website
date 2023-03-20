@@ -1,0 +1,30 @@
+<nav class="navbar" style="max-width: 1250px;">
+    <!-- LOGO -->
+    <div class="logo">
+        <h1>SkyBridge</h1>
+    </div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a routerLink="./">Home</a></li>
+            <li><a routerLink="./aboutus">About Us</a></li>
+            <li class="services">
+                <a href="/">Services</a>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown">
+                    <li><a href="/">Management </a></li>
+                    <li><a href="/">Sales</a></li>
+                    <li><a href="/">Rental</a></li>
+
+                </ul>
+            </li>
+            <li><a routerLink="./rental">Rental</a></li>
+            <li><a routerLink="./rental">Sales</a></li>
+            <li><a routerLink="./contactus">Contact Us</a></li>
+        </div>
+    </ul>
+</nav>

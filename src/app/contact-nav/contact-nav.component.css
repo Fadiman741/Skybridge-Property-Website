@@ -1,0 +1,18 @@
+.contactnav {
+    background-color: #f0438e;
+    width: 100vw;
+    color: aliceblue;
+}
+
+.contact-nav {
+    display: flex;
+    align-items: flex;
+    height: 3vh;
+    max-width: 1500px;
+    background-color: #f0438e;
+}
+
+.contact-nav p {
+    background-color: #f0438e;
+    padding-left: 20px;
+}
