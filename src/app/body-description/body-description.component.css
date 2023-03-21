@@ -4,6 +4,8 @@
     background-size: 100% 100%;
     height: 90vh;
     font-weight: 100;
+    font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
 }
 
 .container .buttons {
@@ -18,8 +20,8 @@
     border: none;
     color: white;
     padding: 20px;
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -31,7 +33,7 @@
 }
 
 .container .services {
-    width: 70%;
+    width: 80%;
     border: 3px solid #f0438e;
     padding: 20px;
     padding-top: 30px;
@@ -43,8 +45,11 @@
 .container .services .items {
     margin-top: 5%;
     display: flex;
-    width: 70%;
     padding: 20px;
+}
+
+.container .services .items i {
+    font-size: 48px;
 }
 
 .container .services button {
@@ -62,14 +67,19 @@
 }
 
 .container .search {
-    max-width: 800px;
+    max-width: 770px;
     margin: auto;
     padding-top: 5%;
 }
 
 .search i {
-    position: absolute;
-    padding: 10px
+    background-color: white;
+    padding: 10px;
+    height: 17px;
+}
+
+input:focus {
+    outline: none;
 }
 
 .container .search .select {
@@ -84,4 +94,18 @@
     background-color: #f0438e;
     color: White;
     border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .services button {
+        padding: 10px;
+        width: 65px;
+        height: 65px;
+    }
+    .container .services .items {
+        font-size: 12px;
+    }
+    .container .services .items i {
+        font-size: 30px;
+    }
 }

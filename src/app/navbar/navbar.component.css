@@ -93,7 +93,7 @@ input[type=checkbox] {
     .menu {
         display: none;
         position: absolute;
-        background-color: teal;
+        background-color: #f0438e;
         right: 0;
         left: 0;
         text-align: center;
@@ -101,7 +101,7 @@ input[type=checkbox] {
     }
     .menu li:hover {
         display: inline-block;
-        background-color: #4c9e9e;
+        background-color: #e73180;
         transition: 0.3s ease;
     }
     .menu li+li {
@@ -119,6 +119,6 @@ input[type=checkbox] {
         transform: translateX(35%);
     }
     .dropdown li:hover {
-        background-color: #4c9e9e;
+        background-color: #e73180;
     }
 }
