@@ -13,16 +13,20 @@ import { BodyDescriptionComponent } from './body-description/body-description.co
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { DescriptionComponent } from './description/description.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
-  declarations: [							
+  declarations: [									
     AppComponent,
       ContactNavComponent,
       NavbarComponent,
       BodyDescriptionComponent,
       ContactComponent,
       FooterComponent,
-      AboutComponent
+      AboutComponent,
+      DescriptionComponent,
+      SearchbarComponent
    ],
   imports: [
     BrowserModule,

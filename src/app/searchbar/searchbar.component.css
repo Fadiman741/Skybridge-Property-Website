@@ -1,0 +1,81 @@
+.container {
+    background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 90vh;
+    font-weight: 100;
+    font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.container .buttons {
+    margin: auto;
+    padding-top: 10%;
+    display: flex;
+}
+
+.container .buttons button {
+    background-color: #f0438e;
+    top: 30%;
+    border: none;
+    color: white;
+    padding: 20px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .services {
+    width: 80%;
+    border: 3px solid #f0438e;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+}
+
+.container .services .items {
+    margin-top: 5%;
+    display: flex;
+    padding: 20px;
+}
+
+.container .services .items i {
+    font-size: 48px;
+}
+
+.container .services button {
+    background-color: #f0438e;
+    color: white;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .services button {
+        padding: 10px;
+        width: 65px;
+        height: 65px;
+    }
+    .container .services .items {
+        font-size: 12px;
+    }
+    .container .services .items i {
+        font-size: 30px;
+    }
+}

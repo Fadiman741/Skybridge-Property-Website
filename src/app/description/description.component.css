@@ -1,0 +1,80 @@
+.description .row {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.description .row p,
+h1 {
+    margin-top: 7%;
+    text-align: center;
+}
+
+.description .row h2 {
+    text-align: center;
+}
+
+.description .row p {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.7em;
+    color: #555454;
+}
+
+.description .column {
+    float: left;
+    width: 21%;
+    margin: 1%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+
+.description .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 767px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.about-section {
+    padding: 30px;
+    text-align: left;
+    background-color: #f0438e;
+    color: white;
+}
+
+.about-section h3 {
+    font-size: 50px;
+}
+
+.about-section p {
+    padding-top: 15px;
+}
+
+.property .column {
+    float: left;
+    width: 40%;
+    margin: 4%;
+    padding: 10px;
+    height: 300px;
+}
+
+.property .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 767px) {
+    .property .column {
+        width: 100%;
+    }
+}

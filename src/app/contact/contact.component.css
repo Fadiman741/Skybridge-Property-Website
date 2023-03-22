@@ -1,3 +1,17 @@
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f0438e;
+    color: white;
+    font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    padding: 20px
+}
+
 .contactContent {
     margin: 10%;
     display: inline-block;
@@ -33,7 +47,6 @@
     background-color: #f0438e;
     color: white;
     border: none;
-    box-shadow: 0px 0px 1px 1px rgb(43, 43, 43);
     width: 40%;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
