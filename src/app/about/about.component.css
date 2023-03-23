@@ -5,6 +5,7 @@
     padding: 0 8px;
     font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
     font-size: 15px;
+    border: 1 solid red;
 }
 
 .card {
@@ -12,9 +13,14 @@
     margin: 10px;
 }
 
-.card p,
-h2 {
+.card p {
     padding: 5px;
+    color: #555454;
+}
+
+.card h2 {
+    padding: 5px;
+    color: #555454;
 }
 
 .about-section {
@@ -24,11 +30,14 @@ h2 {
     color: white;
 }
 
-.container {
-    padding: 0 16px;
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-.container::after,
+.container2::after,
 .row::after {
     content: "";
     clear: both;
@@ -60,6 +69,65 @@ h2 {
 @media screen and (max-width: 650px) {
     .column {
         width: 100%;
-        display: block;
     }
+    .about-company {
+        width: 100%;
+    }
+}
+
+.column1 {
+    float: left;
+    width: 33.33%;
+    height: 200px;
+    /* Should be removed. Only for demonstration */
+}
+
+.bundle .column1 h2 {
+    text-align: center;
+    padding: 10px;
+    color: #eee;
+}
+
+.bundle .column1 p {
+    text-align: center;
+    padding: 10px;
+    color: #ddd;
+}
+
+
+/* Clear floats after the columns */
+
+.bunlde:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column1 {
+        width: 100%;
+    }
+}
+
+
+/*=================================================================================================*/
+
+.about-company {
+    float: left;
+    width: 50%;
+    color: #555454;
+    position: relative;
+}
+
+.about-company h1 {
+    padding: 10px;
+}
+
+.about-company p {
+    font-size: 15px;
+    line-height: 1.9em;
+    padding: 10px;
 }

@@ -16,8 +16,9 @@ import { AboutComponent } from './about/about.component';
 import { DescriptionComponent } from './description/description.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 
+
 @NgModule({
-  declarations: [									
+  declarations: [											
     AppComponent,
       ContactNavComponent,
       NavbarComponent,
@@ -26,7 +27,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
       FooterComponent,
       AboutComponent,
       DescriptionComponent,
-      SearchbarComponent
+      SearchbarComponent,
+
    ],
   imports: [
     BrowserModule,

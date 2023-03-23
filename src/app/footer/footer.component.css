@@ -10,8 +10,7 @@ footer {
 
 .footer-column {
     float: left;
-    width: 23%;
-    padding: 10px;
+    width: 18%;
     /* Should be removed. Only for demonstration */
     font-family: arial;
 }
@@ -52,7 +51,7 @@ footer {
         background-color: #f0438e;
     }
     .footer-column li {
-        font-size: small;
+        font-size: 13px;
         margin-top: 5px;
         list-style-type: none;
         text-align: left;

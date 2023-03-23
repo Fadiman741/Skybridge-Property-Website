@@ -39,7 +39,7 @@
     padding-top: 30px;
     background-color: black;
     opacity: 0.8;
-    color: white;
+    color: #fff;
 }
 
 .container .services .items {
@@ -54,7 +54,7 @@
 
 .container .services button {
     background-color: #f0438e;
-    color: white;
+    color: #fff;
     padding: 20px;
     width: 100px;
     height: 100px;

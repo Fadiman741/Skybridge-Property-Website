@@ -7,10 +7,12 @@
 h1 {
     margin-top: 7%;
     text-align: center;
+    color: #555454;
 }
 
 .description .row h2 {
     text-align: center;
+    color: #555454;
 }
 
 .description .row p {
@@ -25,7 +27,6 @@ h1 {
     float: left;
     width: 21%;
     margin: 1%;
-    padding: 10px;
     /* Should be removed. Only for demonstration */
 }
 
@@ -39,7 +40,7 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
-    .column {
+    .description .column {
         width: 100%;
     }
 }
@@ -53,24 +54,30 @@ h1 {
 
 .about-section h3 {
     font-size: 50px;
+    padding-top: 50px;
 }
 
 .about-section p {
-    padding-top: 15px;
+    padding-bottom: 50px;
 }
 
 .property .column {
     float: left;
     width: 40%;
     margin: 4%;
-    padding: 10px;
-    height: 300px;
+    color: #555454;
 }
 
 .property .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.property .column h3,
+p,
+h2 {
+    padding: 7px;
 }
 
 @media screen and (max-width: 767px) {
