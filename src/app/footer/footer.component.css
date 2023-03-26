@@ -3,14 +3,15 @@ footer {
     padding: 3px;
     background-color: #f0438e;
     color: white;
-    height: 280px;
+    height: 300px;
     font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
     font-size: 15px;
 }
 
 .footer-column {
+    margin-top: 30px;
     float: left;
-    width: 18%;
+    width: 20%;
     /* Should be removed. Only for demonstration */
     font-family: arial;
 }
