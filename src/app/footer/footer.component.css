@@ -12,7 +12,7 @@ footer {
     margin-top: 30px;
     float: left;
     width: 20%;
-    /* Should be removed. Only for demonstration */
+
     font-family: arial;
 }
 
@@ -41,7 +41,7 @@ footer {
     margin-left: 3%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (mmax-width: 767px) {
     footer {
         text-align: center;
     }

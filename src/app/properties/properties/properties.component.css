@@ -57,6 +57,7 @@ ul {
 li {
     float: left;
     padding-right: 30px;
+    font-size: x-small;
 }
 
 li a {
@@ -69,4 +70,40 @@ li a {
 
 i {
     color: #555454;
+    font-size: small;
+}
+
+@media only screen and (max-width: 767px) {
+    .container2 {
+        width: 98%;
+        margin: 1%;
+    }
+    .container .container2 .property-description {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container .container2 .property-description h1 {
+        padding-top: 0px;
+        font-size: larger;
+    }
+    .container .container2 .property-description p {
+        padding-top: 4px;
+        font-size: x-small;
+    }
+    .container .container2 .property-description h3 {
+        padding-top: 2px;
+        font-size: small;
+    }
+    .container .container2 .property-description .house-specification {
+        padding-top: 0px;
+    }
+    li {
+        padding-right: 10px;
+    }
+    .column {
+        height: 150px;
+    }
+    i {
+        font-size: small;
+    }
 }
