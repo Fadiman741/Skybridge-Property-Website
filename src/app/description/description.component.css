@@ -41,7 +41,8 @@ h1 {
 
 @media screen and (max-width: 767px) {
     .description .column {
-        width: 100%;
+        width: 92%;
+        margin: 4%;
     }
 }
 
@@ -82,6 +83,7 @@ h2 {
 
 @media screen and (max-width: 767px) {
     .property .column {
-        width: 100%;
+        width: 92%;
+        margin: 4%;
     }
 }
