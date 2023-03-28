@@ -196,12 +196,13 @@ h1 {
 
 @media screen and (max-width: 767px) {
     .description .column {
-        width: 100%;
+        width: 98%;
+        margin: 1%;
     }
     .about-company {
         width: 100%;
     }
     .description .row p {
-        padding: 20px;
+        padding: 10px;
     }
 }
