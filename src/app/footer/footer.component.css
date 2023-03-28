@@ -40,9 +40,14 @@ footer {
     }
     .footer-column {
         margin-top: 1px;
-        padding: 20px;
         width: 100%;
         font-family: arial;
         background-color: #f0438e;
+    }
+    .footer-column li {
+        padding-bottom: 10px;
+    }
+    .footer-column h2 {
+        padding-top: 15px;
     }
 }
