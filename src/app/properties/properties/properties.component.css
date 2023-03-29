@@ -57,7 +57,7 @@ ul {
 li {
     float: left;
     padding-right: 30px;
-    font-size: x-small;
+    font-size: small;
 }
 
 li a {
@@ -70,7 +70,16 @@ li a {
 
 i {
     color: #555454;
-    font-size: small;
+    font-size: medium;
+}
+
+.prop-description {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    height: 135px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -99,11 +108,16 @@ i {
     }
     li {
         padding-right: 10px;
+        font-size: x-small;
     }
     .column {
         height: 150px;
     }
     i {
         font-size: small;
+    }
+    .prop-description {
+        -webkit-line-clamp: 4;
+        height: 48px;
     }
 }
