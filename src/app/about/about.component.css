@@ -157,6 +157,7 @@
     margin-top: 7%;
     text-align: center;
     color: #555454;
+    padding: 10px
 }
 
 h1 {
@@ -186,8 +187,8 @@ h1 {
 
 .description .column {
     float: left;
-    width: 22%;
-    margin: 0.5%;
+    width: 23%;
+    margin: 1%;
 }
 
 .description .row:after {
