@@ -116,6 +116,8 @@
 @media screen and (max-width: 767px) {
     .column1 {
         width: 100%;
+        background-color: #f0438e;
+        height: 260px;
     }
 }
 
