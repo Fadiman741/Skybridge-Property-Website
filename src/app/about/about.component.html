@@ -11,18 +11,12 @@
             <p>Skybridge is a modern property management company that has gained a reputation for providing a unique combination of technology-driven solutions, personalized service, and a hands-on approach to managing properties. They are focused on understanding
                 the needs of tenants and working closely with property owners and developers to create sustainable living and working spaces that add value to cities. The company has established itself as a leading player in the property management industry,
                 with a strong presence in the Maboneng precinct of Johannesburg and a growing portfolio of close to 100 apartments in Pretoria and Johannesburg.</p>
-
         </div>
         <div class="about-company">
 
             <p>Driven by strong demand for property management solutions, a hands-on approach, and good old-fashioned personal service, Skybridge has established itself as a new breed in the property stable. By understanding tenants’ needs and partnering
                 closely with property owners and developers, Skybridge not only maximises income for property investors but adds value to our cities by managing sustainable living and working spaces. SkyBridge has created a home for itself in the pretoria,
                 while servicing the management needs of many other clients throughout the province</p>
-
-
-
-
-
         </div>
     </div>
 </div>
@@ -79,53 +73,24 @@
                 the ideal one. We provide an extensive selection of residential properties and a considerable commercial and retail inventory, catering to buyers with unique requirements. Our team of experts will guide you through the entire process,
                 leveraging our expertise, knowledge, and experience.</p>
         </div>
-
     </div>
 </div>
+
 <div style="background-color:#f0438e; height: 100px;">
     <div style="max-width:1080px;margin:auto">
         <h1 style="padding: 30px;color: #f5f4f4;">Our Teams</h1>
-
     </div>
-
-
 </div>
 
 <div class="row" style="max-width:1080px;margin:auto">
-    <div class="column">
+    <div class="column" *ngFor="let item of  profileData">
         <div class="card">
-            <img src="https://www.usnews.com/object/image/00000175-c364-db19-a3ff-d7754cd00000/201113-studying-stock.jpg?update-time=1605300999567&size=responsive970 " alt="Jane" style="width:100%">
+            <img [src]=item.profile alt="Jane" style="width:100%">
             <div class="container">
-                <h2>Mafadi Lephaka</h2>
-                <p class="title">CEO & Founder</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <h2>{{item.name}}</h2>
+                <p class="title">{{item.position}}</p>
+                <p>{{item.about}}</p>
                 <!-- <p>jane@example.com</p> -->
-                <p><button class="button">Contact</button></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="card">
-            <img src="https://www.usnews.com/object/image/00000175-c364-db19-a3ff-d7754cd00000/201113-studying-stock.jpg?update-time=1605300999567&size=responsive970 " alt="Mike" style="width:100%">
-            <div class="container">
-                <h2>Mike Ross</h2>
-                <p class="title">Agent</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <!-- <p>mike@example.com</p> -->
-                <p><button class="button">Contact</button></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="card">
-            <img src="https://www.usnews.com/object/image/00000175-c364-db19-a3ff-d7754cd00000/201113-studying-stock.jpg?update-time=1605300999567&size=responsive970 " alt="John" style="width:100%">
-            <div class="container">
-                <h2>John Doe</h2>
-                <p class="title">Agent</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <!-- <p>john@example.com</p> -->
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
