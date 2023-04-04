@@ -87,6 +87,13 @@ i {
     text-align: center;
 }
 
+footer {
+    background-color: #f0438e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 767px) {
     .container2 {
         width: 98%;
@@ -124,5 +131,8 @@ i {
     .prop-description {
         -webkit-line-clamp: 4;
         height: 48px;
+    }
+    .pagination {
+        font-size: small;
     }
 }
