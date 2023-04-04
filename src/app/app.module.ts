@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 
 import { AppRoutingModule } from './app-routing.module';
-import {PropertyroutingModule} from './properties/property-routing.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'   
+import {PropertyModule} from './properties/property.module';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome' ;  
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { DescriptionComponent } from './description/description.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+
+
 
 
 @NgModule({
@@ -34,8 +37,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PropertyroutingModule,
-    FontAwesomeModule 
+    FontAwesomeModule,
+    PropertyModule
 
   ],
   providers: [],

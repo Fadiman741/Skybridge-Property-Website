@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PropertiesComponent } from './properties/properties.component';
-import {FooterComponent} from '../footer/footer.component';
+
+
+import {PropertyroutingModule} from './property-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    PropertyroutingModule
   ],
-  declarations: [PropertiesComponent,FooterComponent]
+  declarations: [PropertiesComponent]
 })
 export class PropertyModule { }
