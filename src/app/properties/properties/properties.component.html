@@ -3,7 +3,13 @@
 </div>
 <div class="container">
     <div class="container2">
-        <div class="row" *ngFor="let item of  propertyData">
+        <div class="row" *ngFor="let item of  propertyData |  paginate
+        : {
+            itemsPerPage: tableSize,
+            currentPage: page,
+            totalItems: count
+          };
+            let i = index">
             <div class="column" style="background-color:#aaa;">
                 <img src="https://cf.bstatic.com/images/hotel/max1024x768/215/215212722.jpg" style="width:100% ; height:100%" />
             </div>
@@ -26,5 +32,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="pagination">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
     </div>
 </div>

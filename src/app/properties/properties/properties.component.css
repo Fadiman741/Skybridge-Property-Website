@@ -82,6 +82,11 @@ i {
     height: 135px;
 }
 
+.pagination {
+    margin: 2.5%;
+    text-align: center;
+}
+
 @media only screen and (max-width: 767px) {
     .container2 {
         width: 98%;
