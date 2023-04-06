@@ -23,10 +23,14 @@
                     </div>
                     <div class="house-specification" valign="bottom">
                         <ul>
-                            <li><i class="fa fa-bed"></i> {{item.rooms}}</li>
-                            <li><i class="fa fa-bath"></i> {{item.bathrooms}}</li>
-                            <li><i class='fas fa-car'></i>{{item.garages}}</li>
-                            <li><i class='fas fa-home'></i>{{item.size}}<sup>2</sup></li>
+                            <li>
+                                <fa-icon [icon]="faBed"></fa-icon> {{item.rooms}}</li>
+                            <li>
+                                <fa-icon [icon]="faBath"></fa-icon> {{item.bathrooms}}</li>
+                            <li>
+                                <fa-icon [icon]="faCar"></fa-icon>{{item.garage }}</li>
+                            <li>
+                                <fa-icon [icon]="faHouse"></fa-icon>{{item.size}} m<sup style="font-size: 9px;">2</sup></li>
                         </ul>
                     </div>
                 </div>

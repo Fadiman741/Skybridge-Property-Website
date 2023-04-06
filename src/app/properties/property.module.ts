@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PropertiesComponent } from './properties/properties.component';
 import {FilterComponent} from './filter/filter.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome' ;  
+
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
@@ -12,7 +14,8 @@ import {PropertyroutingModule} from './property-routing.module';
   imports: [
     CommonModule,
     PropertyroutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FontAwesomeModule
   ],
   declarations: [PropertiesComponent,FilterComponent]
 })

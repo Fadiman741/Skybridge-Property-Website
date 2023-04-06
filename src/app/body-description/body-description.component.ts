@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { faBuilding} from '@fortawesome/free-regular-svg-icons';
+
+
 @Component({
   selector: 'app-body-description',
   templateUrl: './body-description.component.html',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyDescriptionComponent implements OnInit {
 
+  Building=faBuilding;
+
+
   servicesArray:any=[
     { id:1,
-      icon:"fas fa-building",
+      icon:"Building",
       name:"Rental Management"
     },
     { id:2,

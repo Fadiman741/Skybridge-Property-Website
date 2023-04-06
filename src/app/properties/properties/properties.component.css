@@ -47,6 +47,12 @@
     margin-top: 10px;
 }
 
+.house-specification fa-icon {
+    font-size: medium;
+    color: #555454;
+    padding-left: 7px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -57,7 +63,7 @@ ul {
 li {
     float: left;
     padding-right: 30px;
-    font-size: small;
+    font-size: medium;
 }
 
 li a {
@@ -119,7 +125,7 @@ footer {
         padding-top: 0px;
     }
     li {
-        padding-right: 10px;
+        padding-right: 5px;
         font-size: x-small;
     }
     .column {
@@ -134,5 +140,10 @@ footer {
     }
     .pagination {
         font-size: small;
+    }
+    .house-specification fa-icon {
+        font-size: small;
+        color: #555454;
+        padding-left: 7px;
     }
 }

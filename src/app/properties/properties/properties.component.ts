@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faEnvelope} from '@fortawesome/free-regular-svg-icons';
+import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -7,6 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./properties.component.css']
 })
 export class PropertiesComponent implements OnInit {
+
+  faBed=faBed;
+  faBath=faBath;
+  faCar=faCar;
+  faHouse=faHouse;
+  faSquare=faSquare;
+
 
   page: number = 1;
   count: number = 0;
