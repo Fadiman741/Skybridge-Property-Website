@@ -10,7 +10,7 @@
 
 .container .buttons {
     margin: auto;
-    padding-top: 8%;
+    padding-top: 7%;
     display: flex;
 }
 
@@ -69,7 +69,7 @@
 .container .search {
     max-width: 770px;
     margin: auto;
-    padding-top: 5%;
+    padding-top: 7%;
 }
 
 .container .search input {
@@ -116,5 +116,16 @@ _ input:focus {
     }
     .container .services .items i {
         font-size: 30px;
+    }
+    .container .search {
+        max-width: 770px;
+        margin: auto;
+        padding-top: 15%;
+    }
+    .container .buttons {
+        padding-top: 15%;
+    }
+    .container .services {
+        padding-top: 10%;
     }
 }
