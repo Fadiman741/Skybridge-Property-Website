@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
 
-  
   profileData:any=[
     { id:1,
       profile:"./assets/profilepictures/mafadi.jpg",
