@@ -10,7 +10,7 @@
 
 .container .buttons {
     margin: auto;
-    padding-top: 10%;
+    padding-top: 8%;
     display: flex;
 }
 
@@ -36,7 +36,7 @@
     width: 80%;
     border: 3px solid #f0438e;
     padding: 20px;
-    padding-top: 30px;
+    padding-top: 20px;
     background-color: black;
     opacity: 0.8;
     color: #fff;
@@ -83,7 +83,11 @@
     height: 17px;
 }
 
-input:focus {
+.search input {
+    border-radius: 5px;
+}
+
+_ input:focus {
     outline: none;
 }
 

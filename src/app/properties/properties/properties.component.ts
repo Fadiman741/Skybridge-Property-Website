@@ -10,7 +10,7 @@ export class PropertiesComponent implements OnInit {
 
   page: number = 1;
   count: number = 0;
-  tableSize: number = 3;
+  tableSize: number = 5;
   tableSizes: any = [3, 6, 9, 12];
 
     propertyData:any=[
