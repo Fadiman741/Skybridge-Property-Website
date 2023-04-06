@@ -72,6 +72,11 @@
     padding-top: 5%;
 }
 
+.container .search input {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .search i {
     background-color: white;
     padding: 10px;
