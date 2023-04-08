@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faLayerGroup,faEnvelope,faMemory} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
+  faLayerGroup=faLayerGroup;
+  faEnvelope=faEnvelope;
+  faMemory=faMemory;
 
 
   profileData:any=[
