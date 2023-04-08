@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {PropertyModule} from './properties/property.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome' ;  
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
@@ -41,7 +42,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     PropertyModule
 
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
