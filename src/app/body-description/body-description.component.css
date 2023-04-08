@@ -2,7 +2,7 @@
     background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 90vh;
+    height: 89vh;
     font-weight: 100;
     font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
     font-size: 15px;
@@ -35,7 +35,7 @@
 .container .services {
     width: 80%;
     border: 3px solid #f0438e;
-    padding: 20px;
+    padding: 15px;
     padding-top: 2%;
     background-color: black;
     opacity: 0.8;
@@ -55,7 +55,6 @@
 .container .services button {
     background-color: #f0438e;
     color: #fff;
-    padding: 1%;
     width: 100px;
     height: 100px;
     border: none;
