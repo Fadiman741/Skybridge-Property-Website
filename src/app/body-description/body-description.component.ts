@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { faBuilding} from '@fortawesome/free-regular-svg-icons';
+import { faBook,faMagnifyingGlassChart,faHouse,faChartSimple} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,12 +11,17 @@ import { faBuilding} from '@fortawesome/free-regular-svg-icons';
 })
 export class BodyDescriptionComponent implements OnInit {
 
-  Building=faBuilding;
+  faBuilding=faBuilding;
+  faBook=faBook;
+  faMagnifyingGlassChart=faMagnifyingGlassChart;
+  faHouse=faHouse;
+  faChartSimple=faChartSimple;
+  
 
 
   servicesArray:any=[
     { id:1,
-      icon:"Building",
+      icon:faBuilding,
       name:"Rental Management"
     },
     { id:2,
