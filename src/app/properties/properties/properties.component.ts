@@ -24,9 +24,10 @@ export class PropertiesComponent implements OnInit {
 
     propertyData:any=[
     { id:1,
-      image:"./assets/profilepictures/mafadi.jpg",
+      image:"https://images.prop24.com/273080775/Crop508x373",
       name:"Rental Management",
       price:"R 200 000",
+      type:"house",
       province:"Pretoria central",
       address: "House 22 Stanza road",
       description: "2 bathrooms Opee area Stacking doors open up to the swimmingpool area Study Kitchen with granite tops Seperate washingroom pen plan diingroom and lounge area Stacking doors open up to the swimmingpool area Study Kitchen with granite tops Seperate washingroom",
@@ -36,8 +37,9 @@ export class PropertiesComponent implements OnInit {
       size:1047
     },
     { id:2,
-      image:"fas fa-building",
+      image:"https://assets.marketapts.com/assets/converted/262ALV/images/apartments/photos/k5jsvtcrwcmkyo6mxl4sj3ad854v5aex.jpg.800x600.jpg",
       name:"Rental Management",
+      type:"apartment",
       price:"R 200 000",
       province:"Centurion",
       address: "House 22 Stanza road",
@@ -100,7 +102,8 @@ export class PropertiesComponent implements OnInit {
       size:1047
     },
     { id:5,
-      image:"fas fa-building",
+      image:"https://res.cloudinary.com/apartmentlist/image/upload/f_auto,q_auto,t_web-base/13e154d5fa12be668a2b5f3921398b1f.jpg",
+      type:"apartment",
       name:"Rental Management",
       price:"R 200 000",
       province:"Centurion",
@@ -112,7 +115,8 @@ export class PropertiesComponent implements OnInit {
       size:1047
     },
     { id:6,
-      image:"fas fa-building",
+      image:"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg",
+      type:"house",
       name:"Rental Management",
       price:"R 200 000",
       province:"Pretoria central",
