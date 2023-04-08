@@ -90,10 +90,12 @@ _ input:focus {
     outline: none;
 }
 
-.container .search .select {
+.container .search select {
     height: 35px;
     width: 80%;
     border: none;
+    border-radius: 5px;
+    padding-left: 10px;
 }
 
 .container .search .submit {
