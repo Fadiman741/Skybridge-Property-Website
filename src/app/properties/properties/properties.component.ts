@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faEnvelope} from '@fortawesome/free-regular-svg-icons';
+import { Router } from '@angular/router';
+
 import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -130,7 +131,7 @@ export class PropertiesComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -142,6 +143,9 @@ export class PropertiesComponent implements OnInit {
     this.tableSize = event.target.value;
     this.page = 1;
     this.propertyData;
+  }
+  ViewProperty(){
+    this.router.navigate(['/property']);
   }
 
 }

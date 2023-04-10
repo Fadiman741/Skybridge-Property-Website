@@ -9,9 +9,9 @@
             currentPage: page,
             totalItems: count
           };
-            let i = index">
+            let i = index" (click)="ViewProperty()">
             <div class="column" style="background-color:#aaa;">
-                <img src={{item.image}} style="width:100% ; height:100%" />
+                <img [src]=item.image style="width:100% ; height:100%" />
             </div>
             <div class="column" style="background-color:#f5f4f4;">
                 <div class="property-description">
