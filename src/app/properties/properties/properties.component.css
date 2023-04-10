@@ -85,7 +85,7 @@ i {
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 7;
-    height: 135px;
+    height: 137px;
 }
 
 .pagination {
@@ -129,14 +129,14 @@ footer {
         font-size: x-small;
     }
     .column {
-        height: 150px;
+        height: 156px;
     }
     i {
         font-size: small;
     }
     .prop-description {
         -webkit-line-clamp: 4;
-        height: 48px;
+        height: 50px;
     }
     .pagination {
         font-size: small;
