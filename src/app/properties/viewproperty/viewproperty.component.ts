@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {PropertyService} from '../../services/property.service'
+
+import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-viewproperty',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewpropertyComponent implements OnInit {
 
-  constructor() { }
+  faBed=faBed;
+  faBath=faBath;
+  faCar=faCar;
+  faHouse=faHouse;
+  faSquare=faSquare;
+
+  propertyList  : any[] = [];
+
+  constructor(private PropertyService:PropertyService) { }
 
   ngOnInit() {
+    this.propertyList = this.PropertyService.fetchAll();
   }
 
 }

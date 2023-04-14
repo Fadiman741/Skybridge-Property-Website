@@ -1,0 +1,17 @@
+.description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.property {
+    width: 65%;
+    background-color: #aaa;
+    height: 600px;
+}
+
+.agent {
+    width: 33%;
+    background-color: #ddd;
+    height: 200px;
+    margin-left: 2%;
+}

@@ -6,6 +6,7 @@ import {ContactComponent} from './contact/contact.component';
 import {AboutComponent} from'./about/about.component';
 
 
+
 const routes: Routes = [
   {path:'', component:BodyDescriptionComponent},
   {path:'aboutus', component:AboutComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+    declarations: [ ]
 })
 export class AppRoutingModule { }

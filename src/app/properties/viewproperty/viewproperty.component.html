@@ -1,3 +1,44 @@
-<p>
-  viewproperty works!
-</p>
+<div style="max-width:900px;margin:auto">
+    <div>
+        <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg">
+    </div>
+    <div class="description">
+        <div class="property">
+            <div class="row" *ngFor="let item of  propertyList ">
+                <div class="column" style="background-color:#aaa;">
+                    <img [src]=item.image style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#f5f4f4;">
+                    <div class="property-description">
+                        <h1>{{item.price}}</h1>
+                        <h3>{{item.province}}</h3>
+                        <p>{{item.address}}</p>
+                        <div class="prop-description">
+                            <p>{{item.description}} </p>
+                        </div>
+                        <div class="house-specification" valign="bottom">
+                            <ul>
+                                <li>
+                                    <fa-icon [icon]="faBed"></fa-icon> {{item.rooms}}</li>
+                                <li>
+                                    <fa-icon [icon]="faBath"></fa-icon> {{item.bathrooms}}</li>
+                                <li>
+                                    <fa-icon [icon]="faCar"></fa-icon> {{item.garage }}</li>
+                                <li>
+                                    <fa-icon [icon]="faHouse"></fa-icon> {{item.size}} m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        dgdgddddddddddddddddddddddddddd
+    </div>
+
+</div>
+<div class="agent">
+    jmnbj
+</div>
