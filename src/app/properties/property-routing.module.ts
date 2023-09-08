@@ -6,7 +6,8 @@ import {ViewpropertyComponent} from './viewproperty/viewproperty.component';
 const routes: Routes = [
 
   {path:'rental' , component:PropertiesComponent},
-  {path:'property' , component:ViewpropertyComponent}
+  {path:'property' , component:ViewpropertyComponent},
+
 
 ];
 

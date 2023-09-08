@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,7 @@ import {PropertyModule} from './properties/property.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome' ;  
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { DescriptionComponent } from './description/description.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import {FilterComponent} from './filter/filter.component';
+
 
 
 
@@ -33,16 +37,19 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
       AboutComponent,
       DescriptionComponent,
       SearchbarComponent,
+      FilterComponent
 
-   ],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    PropertyModule
+    PropertyModule,
+    HttpClientModule,
+    CarouselModule,
 
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+ // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

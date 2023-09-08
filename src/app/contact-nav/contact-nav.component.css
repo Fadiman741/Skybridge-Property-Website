@@ -1,8 +1,8 @@
 .contactnav {
-    background-color: #f0438e;
+    background-color:  #2d1424;
     width: 100%;
     color: aliceblue;
-    font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
+    font-family:  Arial, sans-serif;
     font-size: 15px;
 }
 
@@ -11,10 +11,10 @@
     align-items: flex;
     height: 3vh;
     max-width: 1500px;
-    background-color: #f0438e;
+    /* background-color: #f0438e; */
 }
 
 .contact-nav p {
-    background-color: #f0438e;
+    /* background-color: #f0438e; */
     padding-left: 20px;
 }

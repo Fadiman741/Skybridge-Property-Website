@@ -1,48 +1,192 @@
+
 <div style="height:12%;background-color:#f0438e ;">
-    <app-filter></app-filter>
+    <!-- <app-filter></app-filter> -->
 </div>
-<div class="container">
-    <div class="container2">
-        <div class="row" *ngFor="let item of  propertyList |  paginate
-        : {
-            itemsPerPage: tableSize,
-            currentPage: page,
-            totalItems: count
-          };
-            let i = index" (click)="ViewProperty()">
-            <div class="column" style="background-color:#aaa;">
-                <img [src]=item.image style="width:100% ; height:100%" />
-            </div>
-            <div class="column" style="background-color:#f5f4f4;">
-                <div class="property-description">
-                    <h1>{{item.price}}</h1>
-                    <h3>{{item.province}}</h3>
-                    <p>{{item.address}}</p>
-                    <div class="prop-description">
-                        <p>{{item.description}} </p>
-                    </div>
-                    <div class="house-specification" valign="bottom">
-                        <ul>
-                            <li>
-                                <fa-icon [icon]="faBed"></fa-icon> {{item.rooms}}</li>
-                            <li>
-                                <fa-icon [icon]="faBath"></fa-icon> {{item.bathrooms}}</li>
-                            <li>
-                                <fa-icon [icon]="faCar"></fa-icon> {{item.garage }}</li>
-                            <li>
-                                <fa-icon [icon]="faHouse"></fa-icon> {{item.size}} m<sup style="font-size: 9px;">2</sup></li>
-                        </ul>
+<div style="background-color:#2d1424">
+    <div class="container">
+        <div class="container2">
+            <br>
+            <div class="row" (click)="ViewProperty()">
+                <div class="column" style="background-color:#aaa;">
+                    <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Stock-Modern-House-In-Twilight-AdobeStock-368976934-copy.jpg" style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#fff;">
+                    <div class="property-description">
+                        <p>2 bedroon in Pretoria</p>
+                        <h1 style="font-weight: 700;">R 4500</h1>
+                        <br>
+                        <p>21 pretoria street</p>
+                       
+                        <div class="house-specification" valign="bottom">
+                            <ul style="display: flex;">
+                                <li><fa-icon [icon]="faBed"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faBath"></fa-icon> 1</li>
+                                <li><fa-icon [icon]="faCar"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faHouse"></fa-icon> 10m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div style="width: 50px;height: 50px;border-radius: 50%;background-color: #525252;float: right;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudDbHeW2OobhX8E9fAY-ctpUAHeTNWfaqJA&usqp=CAU" style="width:100% ; height:100%;border-radius: 50%;" />
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row" (click)="ViewProperty()" >
+                <div class="column" style="background-color:#aaa;">
+                    <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Stock-Modern-House-In-Twilight-AdobeStock-368976934-copy.jpg" style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#fff;">
+                    <div class="property-description">
+                        <p>2 bedroon in Pretoria</p>
+                        <h1 style="font-weight: 700;">R 4500</h1>
+                        <br>
+                        <p>21 pretoria street</p>
+                       
+                        <div class="house-specification" valign="bottom">
+                            <ul style="display: flex;">
+                                <li><fa-icon [icon]="faBed"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faBath"></fa-icon> 1</li>
+                                <li><fa-icon [icon]="faCar"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faHouse"></fa-icon> 10m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div style="width: 50px;height: 50px;border-radius: 50%;background-color: #525252;float: right;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudDbHeW2OobhX8E9fAY-ctpUAHeTNWfaqJA&usqp=CAU" style="width:100% ; height:100%;border-radius: 50%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" (click)="ViewProperty()">
+                <div class="column" style="background-color:#aaa;">
+                    <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Stock-Modern-House-In-Twilight-AdobeStock-368976934-copy.jpg" style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#fff;">
+                    <div class="property-description">
+                        <p>2 bedroon in Pretoria</p>
+                        <h1 style="font-weight: 700;">R 4500</h1>
+                        <br>
+                        <p>21 pretoria street</p>
+                       
+                        <div class="house-specification" valign="bottom">
+                            <ul style="display: flex;">
+                                <li><fa-icon [icon]="faBed"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faBath"></fa-icon> 1</li>
+                                <li><fa-icon [icon]="faCar"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faHouse"></fa-icon> 10m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div style="width: 50px;height: 50px;border-radius: 50%;background-color: #525252;float: right;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudDbHeW2OobhX8E9fAY-ctpUAHeTNWfaqJA&usqp=CAU" style="width:100% ; height:100%;border-radius: 50%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row"  (click)="ViewProperty()">
+                <div class="column" style="background-color:#aaa;">
+                    <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Stock-Modern-House-In-Twilight-AdobeStock-368976934-copy.jpg" style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#fff;">
+                    <div class="property-description">
+                        <p>2 bedroon in Pretoria</p>
+                        <h1 style="font-weight: 700;">R 4500</h1>
+                        <br>
+                        <p>21 pretoria street</p>
+                       
+                        <div class="house-specification" valign="bottom">
+                            <ul style="display: flex;">
+                                <li><fa-icon [icon]="faBed"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faBath"></fa-icon> 1</li>
+                                <li><fa-icon [icon]="faCar"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faHouse"></fa-icon> 10m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div style="width: 50px;height: 50px;border-radius: 50%;background-color: #525252;float: right;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudDbHeW2OobhX8E9fAY-ctpUAHeTNWfaqJA&usqp=CAU" style="width:100% ; height:100%;border-radius: 50%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row"  (click)="ViewProperty()">
+                <div class="column" style="background-color:#aaa;">
+                    <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/Stock-Modern-House-In-Twilight-AdobeStock-368976934-copy.jpg" style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#fff;">
+                    <div class="property-description">
+                        <p>2 bedroon in Pretoria</p>
+                        <h1 style="font-weight: 700;">R 4500</h1>
+                        <br>
+                        <p>21 pretoria street</p>
+                       
+                        <div class="house-specification" valign="bottom">
+                            <ul style="display: flex;">
+                                <li><fa-icon [icon]="faBed"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faBath"></fa-icon> 1</li>
+                                <li><fa-icon [icon]="faCar"></fa-icon> 2</li>
+                                <li><fa-icon [icon]="faHouse"></fa-icon> 10m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div style="width: 50px;height: 50px;border-radius: 50%;background-color: #525252;float: right;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudDbHeW2OobhX8E9fAY-ctpUAHeTNWfaqJA&usqp=CAU" style="width:100% ; height:100%;border-radius: 50%;" />
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- <div class="row" *ngFor="let item of  propertyList |  paginate
+            : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+              };
+                let i = index" (click)="ViewProperty()">
+                <div class="column" style="background-color:#aaa;">
+                    <img [src]=item.image style="width:100% ; height:100%" />
+                </div>
+                <div class="column" style="background-color:#fff;">
+                    <div class="property-description">
+                        <h1>{{item.price}}</h1>
+                        <h3>{{item.province}}</h3>
+                        <p>{{item.address}}</p>
+                        <div class="prop-description">
+                            <p>{{item.description}} </p>
+                        </div>
+                        <div class="house-specification" valign="bottom">
+                            <ul>
+                                <li>
+                                    <fa-icon [icon]="faBed"></fa-icon> {{item.rooms}}</li>
+                                <li>
+                                    <fa-icon [icon]="faBath"></fa-icon> {{item.bathrooms}}</li>
+                                <li>
+                                    <fa-icon [icon]="faCar"></fa-icon> {{item.garage }}</li>
+                                <li>
+                                    <fa-icon [icon]="faHouse"></fa-icon> {{item.size}} m<sup style="font-size: 9px;">2</sup></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="pagination">
+            <!-- <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)"> -->
+            <!-- </pagination-controls> -->
         </div>
     </div>
-    <div class="pagination">
-        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
-        </pagination-controls>
-    </div>
-
+    <footer style="bottom: 0px;">
+        <p>&copy; 2023 Mafadi Lephaka</p>
+    </footer>
 </div>
-<footer style="bottom: 0px;">
-    <p>&copy; 2023 Mafadi Lephaka</p>
-</footer>

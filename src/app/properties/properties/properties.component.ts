@@ -1,8 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import {PropertyService} from '../../services/property.service'
-import { Property } from './../../entities/property.entity';
+//import { Property } from './../../entities/property.entity';
 import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -32,7 +32,20 @@ export class PropertiesComponent implements OnInit {
   constructor(private router:Router ,private PropertyService:PropertyService) { }
 
   ngOnInit() {
-    this.propertyList = this.PropertyService.fetchAll();
+    this.retrievePropertyData()
+    console.log(this.retrievePropertyData())
+
+  }
+  retrievePropertyData() {
+    this.PropertyService.fetchAll()
+      .subscribe(
+        data => {
+          this.propertyList = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
   onTableDataChange(event: any) {
     this.page = event;

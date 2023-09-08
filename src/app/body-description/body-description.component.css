@@ -1,4 +1,4 @@
-.container {
+/* .container {
     background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -129,4 +129,58 @@ _ input:focus {
     .container .services {
         padding-top: 10%;
     }
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* max-width: 1250px; */
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 600px;
+    background-image: linear-gradient(45deg, rgba(39, 22, 19, 0.45), rgba(22, 29, 37, 0.65)), url('https://content.knightfrank.com/images/knightfrank.co.za/homepage/heading-banner/mouille-point.jpg');
+    /* background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.search {
+    display: flex;
+    margin: 20px 0;
+}
+
+select[name="location"] {
+    padding: 10px;
+    border: 1px solid #f0438e;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button4 {
+    background-color: #f0438e;
+    color: white;
+}
+
+.button5 {
+    background-color: #0099cc;
+    color: white;
 }

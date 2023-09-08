@@ -4,9 +4,16 @@
     justify-content: space-between;
     padding: 20px;
     color: #191818;
-    height: 5vh;
+    height: 3vh;
 }
+h1{
+    font-weight: 500;
+    color: #201f1f;
+    padding-top: -20px;
+    font-size: 30px;
+    font-weight: 700;
 
+}
 .nav-links a {
     color: #201f1f;
 }
@@ -16,6 +23,7 @@
 
 .logo {
     font-size: 32px;
+    font-weight: 800;
 }
 
 
@@ -28,9 +36,10 @@
 }
 
 .menu li:hover {
-    background-color: #f0438e;
+    background-color: #2d1424;
     border-radius: 5px;
     transition: 0.3s ease;
+    color: #eee;
 }
 
 .menu li {
@@ -65,7 +74,7 @@
 }
 
 .dropdown li:hover {
-    background-color: #f0438e;
+    background-color: #2d1424;
     color: white;
 }
 
@@ -93,7 +102,7 @@ input[type=checkbox] {
     .menu {
         display: none;
         position: absolute;
-        background-color: #f0438e;
+        background-color: #2d1424;
         right: 0;
         left: 0;
         text-align: center;

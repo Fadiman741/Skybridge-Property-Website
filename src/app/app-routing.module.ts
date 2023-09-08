@@ -10,7 +10,6 @@ import {AboutComponent} from'./about/about.component';
 const routes: Routes = [
   {path:'', component:BodyDescriptionComponent},
   {path:'aboutus', component:AboutComponent},
-
   {path:'contactus', component:ContactComponent}
 
 

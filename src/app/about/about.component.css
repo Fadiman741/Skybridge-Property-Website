@@ -4,28 +4,40 @@
     margin-bottom: 16px;
     font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 10px;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .card p {
-    padding: 5px;
+    padding: 10px;
     color: #555454;
 }
 
 .card h2 {
-    padding: 5px;
+    padding-left: 10px;
     color: #555454;
 }
 
 .about-section {
-    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
-    background-color: #f0438e;
+    background-color: #2d1424;
     color: white;
+}
+.about-content{
+    background-image: linear-gradient(45deg, rgba(54, 33, 50, 0.95), rgba(63, 35, 64, 0.95)), url('https://content.knightfrank.com/images/knightfrank.co.za/homepage/heading-banner/mouille-point.jpg');
+    /* background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200"); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container::after,
@@ -53,11 +65,12 @@
     outline: 0;
     display: inline-block;
     color: white;
-    background-color: #f0438e;
+    background-color: #2d1424;
     text-align: center;
     cursor: pointer;
     width: 100%;
-    height: 35px;
+    /* height: 35px; */
+    padding: 15px;
 }
 
 .button:hover {
@@ -76,7 +89,7 @@
 .column1 {
     float: left;
     width: 33.33%;
-    height: 200px;
+    min-height: 200px;
 }
 
 .bundle .column1 h2 {
@@ -89,6 +102,8 @@
     text-align: center;
     padding: 10px;
     color: #ddd;
+    line-height: 1.6;
+    font-size: 15px;
 }
 
 .bundle fa-icon {
@@ -112,8 +127,8 @@
 @media screen and (max-width: 767px) {
     .column1 {
         width: 100%;
-        background-color: #f0438e;
         height: 260px;
+        background-color: #2d1424;
     }
 }
 
@@ -145,15 +160,15 @@
 /*=====================================================================*/
 
 .description .row {
-    margin-top: 5%;
-    margin-bottom: 10%;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
 }
 
 .description .row p {
     margin-top: 7%;
     text-align: center;
     color: #555454;
-    padding: 10px
+    padding: 20px
 }
 
 h1 {
@@ -163,21 +178,20 @@ h1 {
 }
 
 .description .row h2 {
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: center;
-    color: #555454;
+    color: #e4e4e4;
 }
 
 .description h1 {
-    margin-top: 6%
+    padding-top: 3%
 }
 
 .description .row p {
-    font-family: 'Titillium Web', sans-serif !important;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
     line-height: 1.7em;
-    color: #555454;
+    color: #aaaaaa;
     text-align: justify;
 }
 
@@ -185,6 +199,7 @@ h1 {
     float: left;
     width: 23%;
     margin: 1%;
+    border-radius: 10px;
 }
 
 .description .row:after {
