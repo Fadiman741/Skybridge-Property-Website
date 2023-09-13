@@ -16,8 +16,6 @@ export class BodyDescriptionComponent implements OnInit {
   faMagnifyingGlassChart=faMagnifyingGlassChart;
   faHouse=faHouse;
   faChartSimple=faChartSimple;
-  
-
 
   servicesArray:any=[
     { id:1,
