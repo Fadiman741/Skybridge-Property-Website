@@ -1,29 +1,47 @@
-<nav class="navbar" style="max-width: 1250px;">
-    <!-- LOGO -->
-    <div class="logo">
-        <h1>SkyBridge</h1>
-    </div>
-    <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
-        <!-- USING CHECKBOX HACK -->
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <!-- NAVIGATION MENUS -->
-        <div class="menu">
-            <li><a routerLink="./">Home</a></li>
-            <li><a routerLink="./aboutus">About </a></li>
-            <li class="services">
+<nav class="navbar" style="max-width: 1450px">
+  <!-- LOGO -->
+  <div class="logo">
+    <h1 style="text-transform: uppercase; font-family: serif">SkyBridge</h1>
+    <p style="font-size: 12px; margin-top: -13px; color: #ccc">
+      Properties Management
+    </p>
+  </div>
+  <!-- NAVIGATION MENU -->
+  <ul class="nav-links">
+    <!-- USING CHECKBOX HACK -->
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <!-- NAVIGATION MENUS -->
+    <div class="menu">
+      <li>
+        <a routerLink="./">Home</a>
+      </li>
+      <li>
+        <a routerLink="./aboutus">About</a>
+      </li>
+      <!-- <li class="services">
                 <a href="/">Services</a>
-                <!-- DROPDOWN MENU -->
                 <ul class="dropdown">
-                    <li><a href="/">Management </a></li>
-                    <li><a href="/">Sales</a></li>
-                    <li><a href="/">Rental</a></li>
+                    <li>
+                        <a href="/">Management</a>
+                    </li>
+                    <li>
+                        <a href="/">Sales</a>
+                    </li>
+                    <li>
+                        <a href="/">Rental</a>
+                    </li>
                 </ul>
-            </li>
-            <li><a routerLink="./rental">Rental</a></li>
-            <li><a routerLink="./rental">Sales</a></li>
-            <li><a routerLink="./contactus">Contact </a></li>
-        </div>
-    </ul>
+            </li> -->
+      <li>
+        <a routerLink="./rental">Find a home</a>
+      </li>
+      <!-- <li>
+        <a routerLink="./rental">houses</a>
+      </li> -->
+      <li>
+        <a routerLink="./contactus">Contact us</a>
+      </li>
+    </div>
+  </ul>
 </nav>

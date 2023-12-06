@@ -1,7 +1,7 @@
-.about-section {
+/* .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #f0438e;
+    background-color: #2d1424;;
     color: white;
     font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
     font-size: 15px;
@@ -141,4 +141,83 @@ textarea {
     .contactContent h2 {
         padding-top: 100px;
     }
-}
+} */
+
+
+  /* Add your custom CSS styles here */
+        /* For example, you can style the Contact Information section */
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #2d1424;;
+            color: white;
+            font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+        }
+        .contact-info {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            margin-bottom: 5px;
+            color: #ddd;
+        }
+
+        /* Style the form and map container */
+        .contactContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .col-lg-6 {
+            width: 100%;
+        }
+
+        /* Style the form */
+        .form {
+            background-color: #2d1424;
+            color: #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form input,
+        .form textarea {
+            width: 98%;
+            padding: 0.8%;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form button {
+            background-color: #fff;
+            color: #383838;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form button:hover {
+            background-color: #0056b3;
+        }

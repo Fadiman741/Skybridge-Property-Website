@@ -4,6 +4,7 @@ import { faBuilding} from '@fortawesome/free-regular-svg-icons';
 import { faBook,faMagnifyingGlassChart,faHouse,faChartSimple} from '@fortawesome/free-solid-svg-icons';
 import { faBed,faBath,faCar,faSquare} from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {PropertyService} from '../services/property.service'
 
 
 @Component({
@@ -23,14 +24,21 @@ export class DescriptionComponent implements OnInit {
   faBath=faBath;
   faCar=faCar;
   faSquare=faSquare;
+  propertyList: any;
+  propery_for_rental: any;
+  rental_property: any;
+  sale_property: any;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private PropertyService:PropertyService) { }
 
   ngOnInit() {
+    this.Propertylist();
   }
 
   routeToRental(){
     this.router.navigate(['/rental']);
+
+    
 
   }
   customOptions: OwlOptions = {
@@ -56,6 +64,17 @@ export class DescriptionComponent implements OnInit {
       }
     },
     nav: true
+  }
+  Propertylist() {
+    this.propery_for_rental = this.PropertyService.listProperties;
+    console.log(this.PropertyService.listProperties);
+
+    this.rental_property = this.PropertyService.listProperties.filter(item => item.property_type === "rent");
+    console.log("Rental Properties", this.rental_property);
+
+    this.sale_property = this.PropertyService.listProperties.filter(item => item.property_type === "sale");
+
+
   }
 
 }

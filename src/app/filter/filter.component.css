@@ -5,7 +5,7 @@
 }
 
 .form2 {
-    padding-bottom: 3%;
+    padding-bottom: 1%;
 }
 
 label {
@@ -19,9 +19,11 @@ label {
     padding: 5px 5px;
     width: 31.30%;
     margin: 1%;
-    height: 50px;
+    height: 40px;
     border-radius: 5px;
+    border: none;
     color: #555454;
+    background-color: rgba(255, 255, 255, 0.753);
 }
 
 .form1 select {
@@ -29,7 +31,8 @@ label {
     padding: 5px 5px;
     width: 98%;
     margin: 1%;
-    height: 50px;
+    height: 45px;
     border-radius: 5px;
     color: #555454;
+    border: none;
 }

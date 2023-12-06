@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,14 +21,15 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { DescriptionComponent } from './description/description.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import {FilterComponent} from './filter/filter.component';
+// import {FilterComponent} from './filter/filter.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 
 
 
 @NgModule({
-  declarations: [											
+  declarations: [												
     AppComponent,
       ContactNavComponent,
       NavbarComponent,
@@ -37,9 +39,9 @@ import {FilterComponent} from './filter/filter.component';
       AboutComponent,
       DescriptionComponent,
       SearchbarComponent,
-      FilterComponent
-
-  ],
+      // FilterComponent,
+      ReviewsComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,6 +49,7 @@ import {FilterComponent} from './filter/filter.component';
     PropertyModule,
     HttpClientModule,
     CarouselModule,
+    BrowserAnimationsModule,
 
   ],
  // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

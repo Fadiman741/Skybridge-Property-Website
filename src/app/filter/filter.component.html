@@ -1,44 +1,91 @@
-    <div class="container" style="max-width: 800px;">
-        <form class="location">
-            <div>
+<div class="container" style="max-width: 800px">
+  <form class="location">
+    <div></div>
+    <div class="form1" style="display: flex">
+      <div style="width: 25%; margin-left: 7px">
+        <label>Property</label>
+        <select name="propertytype">
+          <option value="">All</option>
+          <option value="">For Sale</option>
+          <option value="">For Rent</option>
+        </select>
+      </div>
 
-            </div>
-            <div class="form1">
-                <label>Location</label>
-                <select name="location">
-                    <option value="">Any</option>
-                    <option value="">Pretoria Central</option>
-                    <option value="">Centurion</option>
-                    <option value="">Midrand</option>
-                    <option value="">Silver lakes</option>
-                </select>
-            </div>
-            <div class="form2">
-                <select name="propertytype">
-                    <option value="">Property type</option>
-                    <option value="">House</option>
-                    <option value="">Apartment</option>
-                    <option value="">Commercial Property</option>
-                </select>
-                <select name="rooms">
-                    <option value="">Rooms</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4+</option>
-                </select>
-                <select name="prices">
-                    <option value="">Max Price</option>
-                    <option value="">R 2000</option>
-                    <option value="">R 3000</option>
-                    <option value="">R 4000</option>
-                    <option value="">R 5000</option>
-                    <option value="">R 6000</option>
-                    <option value="">R 7000</option>
-                </select>
-            </div>
-            <div>
-                <button style="width: 98%;margin: 1%;padding: 15px;border-radius: 5px;background-color: #f0438e;border: none;color: #fff;">Search</button>
-            </div>
-        </form>
+      <div style="width: 75%; margin: 7px">
+        <label>Location</label>
+        <select name="location">
+          <option value="">Any</option>
+          <option value="">Pretoria Central</option>
+          <option value="">Centurion</option>
+          <option value="">Midrand</option>
+          <option value="">Silver lakes</option>
+        </select>
+      </div>
     </div>
+    <div class="form2">
+      <select name="propertytype">
+        <option value="">Property type</option>
+        <option value="">House</option>
+        <option value="">Apartment</option>
+        <option value="">Commercial Property</option>
+      </select>
+      <select name="prices">
+        <option value="">Min Price</option>
+        <option value="">R 2000</option>
+        <option value="">R 3000</option>
+        <option value="">R 4000</option>
+        <option value="">R 5000</option>
+        <option value="">R 6000</option>
+        <option value="">R 7000</option>
+      </select>
+      <select name="prices">
+        <option value="">Max Price</option>
+        <option value="">R 2000</option>
+        <option value="">R 3000</option>
+        <option value="">R 4000</option>
+        <option value="">R 5000</option>
+        <option value="">R 6000</option>
+        <option value="">R 7000</option>
+      </select>
+    </div>
+    <div class="form2">
+      <select name="rooms">
+        <option value="">bedrooms</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4+</option>
+      </select>
+      <select name="rooms">
+        <option value="">Bathrooms</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4+</option>
+      </select>
+      <select name="prices">
+        <option value="">Garage</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4+</option>
+      </select>
+    </div>
+    <div>
+      <button
+        (click)="applyFilter()"
+        style="
+          width: 98%;
+          margin: 1%;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: #f0438e;
+          border: none;
+          color: #fff;
+        "
+      >
+        Search
+      </button>
+    </div>
+  </form>
+</div>

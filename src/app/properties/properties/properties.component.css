@@ -1,10 +1,9 @@
-.container {
+/* .container {
     max-width: 700px;
     margin: auto;
 }
 
 .container2 {
-    /* width: 70%; */
     margin: auto;
 }
 
@@ -36,7 +35,6 @@
 }
 
 .container .container2 .property-description p {
-    /* padding-top: 10px; */
     color: #555454;
 }
 
@@ -52,7 +50,6 @@
 .house-specification fa-icon {
     font-size: medium;
     color: #5f5f5f;
-    /* padding-left: 5px; */
     font-weight: 700;
 }
 hr{
@@ -67,7 +64,6 @@ ul {
 }
 
 li {
-    /* float: left; */
     padding-right: 15px;
     font-size: medium;
     font-weight: 700;
@@ -123,7 +119,6 @@ footer {
         font-size: larger;
     }
     .container .container2 .property-description p {
-        /* padding-top: 4px; */
         font-size: x-small;
     }
     .container .container2 .property-description h3 {
@@ -155,4 +150,115 @@ footer {
         color: #555454;
         padding-left: 0px;
     }
+} */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.property-card {
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.property-image {
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-details {
+    padding: 20px;
+}
+
+.property-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.property-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f0438e;
+}
+
+.property-location {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #888;
+}
+
+.property-features {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .property-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .property-card {
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------------------------------------- */
+.form1 {
+    padding-top: 7%;
+    padding-bottom: 3%;
+    width: 100%;
+}
+
+.form2 {
+    padding-bottom: 1%;
+}
+
+label {
+    padding-left: 5px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.form2 select {
+    font-size: 0.8rem;
+    padding: 5px 5px;
+    width: 31.30%;
+    margin: 1%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: #555454;
+    background-color: rgba(255, 255, 255, 0.753);
+}
+
+.form1 select {
+    font-size: 0.8rem;
+    padding: 5px 5px;
+    width: 98%;
+    margin: 1%;
+    height: 45px;
+    border-radius: 5px;
+    color: #555454;
+    border: none;
 }
