@@ -141,7 +141,7 @@ body {
     /* max-width: 1250px; */
     margin: 0 auto;
     padding: 20px;
-    min-height: 600px;
+    min-height: 400px;
     background-image: linear-gradient(45deg, rgba(39, 22, 19, 0.45), rgba(22, 29, 37, 0.65)), url('https://content.knightfrank.com/images/knightfrank.co.za/homepage/heading-banner/mouille-point.jpg');
     /* background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200"); */
     background-repeat: no-repeat;

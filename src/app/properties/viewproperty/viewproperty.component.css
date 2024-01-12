@@ -53,7 +53,7 @@
 }
 
 .agent-details button:hover {
-    background-color: #f0438e;
+    background-color: rgb(90, 169, 168);
     border: none;
     color: #eee
 }

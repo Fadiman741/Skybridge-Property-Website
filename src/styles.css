@@ -1,5 +1,5 @@
 * {
-    margin: auto;
+    /* margin: auto; */
     font-family: Arial, sans-serif;
     font-weight: 400;
     /* background-color: #2d1424; */
@@ -101,4 +101,7 @@ body {
 .owl-theme .owl-dots .owl-dot {
     width: auto;
     transform: translate(-50%, -50%);
+}
+.ngx-pagination .current{
+    background-color: rgb(90, 169, 168);
 }

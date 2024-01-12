@@ -23,6 +23,7 @@ import { DescriptionComponent } from './description/description.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 // import {FilterComponent} from './filter/filter.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -40,7 +41,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
       DescriptionComponent,
       SearchbarComponent,
       // FilterComponent,
-      ReviewsComponent
+    ReviewsComponent,
+      
+      
    ],
   imports: [
     BrowserModule,
@@ -50,6 +53,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     HttpClientModule,
     CarouselModule,
     BrowserAnimationsModule,
+    NgxPaginationModule,
+
 
   ],
  // providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

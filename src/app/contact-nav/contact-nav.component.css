@@ -1,20 +1,23 @@
 .contactnav {
-    background-color:  #2d1424;
+    background-color: #f5f5f5;
     width: 100%;
     color: aliceblue;
     font-family:  Arial, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .contact-nav {
     display: flex;
-    align-items: flex;
-    height: 3vh;
+    /* justify-content: space-between; */
+    /* align-items: flex; */
+    height: 40px;
     max-width: 1500px;
     /* background-color: #f0438e; */
 }
 
 .contact-nav p {
     /* background-color: #f0438e; */
-    padding-left: 20px;
+    padding-left: 10px;
+    color: #838383;
+    margin-top: 7px;
 }

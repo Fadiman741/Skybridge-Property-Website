@@ -149,11 +149,16 @@ textarea {
 
         .about-section {
             padding: 50px;
+            min-height: 300px;
             text-align: center;
             background-color: #2d1424;;
             color: white;
             font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
             font-size: 15px;
+            background-image: linear-gradient(45deg, rgba(39, 22, 19, 0.45), rgba(22, 29, 37, 0.65)), url('https://content.knightfrank.com/images/knightfrank.co.za/homepage/heading-banner/mouille-point.jpg');
+                /* background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200"); */
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .contact-info {
             background-color: #f7f7f7;
@@ -176,42 +181,41 @@ textarea {
         /* Style the form and map container */
         .contactContent {
             display: flex;
-            flex-direction: column;
+            /* flex-direction: column; */
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
 
-        .col-lg-6 {
-            width: 100%;
-        }
+        
 
         /* Style the form */
         .form {
-            background-color: #2d1424;
+            background-color: #fff;
             color: #ddd;
             padding: 20px;
             border-radius: 10px;
         }
 
         .form label {
-            font-weight: bold;
+            /* font-weight: bold; */
             margin-bottom: 10px;
         }
 
         .form input,
         .form textarea {
-            width: 98%;
-            padding: 0.8%;
+            width: 96%;
+            padding: 12px 10px;
             margin-bottom: 10px;
             border: none;
             border-radius: 5px;
+            background-color: #eee;
         }
 
         .form button {
-            background-color: #fff;
+            background-color: rgb(90, 169, 168);
             color: #383838;
-            padding: 10px 20px;
+            padding: 10px 40px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -220,4 +224,15 @@ textarea {
 
         .form button:hover {
             background-color: #0056b3;
+        }
+        .contactContent{
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #f5f5f5;
+        }
+        .col-lg-6 {
+
+            width: 50%;
+            padding: 35px;
         }

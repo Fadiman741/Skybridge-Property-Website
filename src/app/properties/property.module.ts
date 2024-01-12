@@ -10,14 +10,17 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 
 import {PropertyroutingModule} from './property-routing.module';
+import { PropertyFilterPipe } from '../pipe/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PropertyroutingModule,
     NgxPaginationModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
-  declarations: [PropertiesComponent,ViewpropertyComponent,FilterComponent]
+  declarations: [PropertiesComponent,ViewpropertyComponent,FilterComponent,  PropertyFilterPipe]
 })
 export class PropertyModule { }

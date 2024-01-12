@@ -1,3 +1,13 @@
+.box{
+    min-height: 300px;
+    padding: 30px;
+    width: 100%;
+}
+.dark{
+    background-color: #f5f5f5;
+}
+
+
 /* .description .row {
     margin-top: 5%;
     margin-bottom: 10%;
@@ -104,7 +114,7 @@ body {
 h1 {
     color: #333;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .column {
@@ -118,13 +128,15 @@ h2 {
     color: #333;
     font-size: 21px;
     margin-top: 0;
+        font-family: BrandonGrotesque-light;
 }
 
 p {
-    color: #b2b2b2;
+    color: #575757;
     font-size: 15px;
     padding-top: 10px;
     line-height: 1.6;
+
     /* text-align: center; */
 }
 
@@ -166,7 +178,7 @@ p {
 }
 
 .property p {
-    color: #d0d0d0;
+    color: #9c9c9c;
     font-size: 15px;
 }
 
@@ -205,14 +217,14 @@ p {
 
 .services {
     /* background-color: #fff; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 20px;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     text-align: center;
     bottom: 0px;
     align-items: center;
-    max-width: 1000px;
-    background-color: #2d1424;
+    max-width: 1600px;
+    /* background-color: #ffffff; */
 
 }
 
@@ -236,24 +248,24 @@ h1 {
 .items button {
     /* background-color: #f0438e; */
     border: none;
-    border-radius: 10px;
+    border-radius: 50%;
     padding: 10px;
     font-size: 30px;
     color: #f0438e;
     cursor: pointer;
-    background-color: #2d1424;
+    background-color:rgb(90, 169, 168);
 
 }
 
 
 
 .get-started {
-    background-color: #f0438e;
+    background-color: rgb(90, 169, 168);
     color: white;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 10px 20px;
     font-size: 20px;
     margin-top: 40px;
-    width: 230px;
+    width: 210px;
     margin: 0 auto;
 }

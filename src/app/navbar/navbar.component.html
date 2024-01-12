@@ -1,8 +1,16 @@
-<nav class="navbar" style="max-width: 1450px">
+<nav class="navbar" style="">
   <!-- LOGO -->
   <div class="logo">
-    <h1 style="text-transform: uppercase; font-family: serif">SkyBridge</h1>
-    <p style="font-size: 12px; margin-top: -13px; color: #ccc">
+    <h1
+      style="
+        text-transform: uppercase;
+        font-family: serif;
+        color: rgb(90, 169, 168);
+      "
+    >
+      SkyBridge
+    </h1>
+    <p style="font-size: 14px; margin-top: -28px; color: #adadad">
       Properties Management
     </p>
   </div>
@@ -16,29 +24,33 @@
       <li>
         <a routerLink="./">Home</a>
       </li>
-      <li>
-        <a routerLink="./aboutus">About</a>
+
+      <li class="services">
+        <a href="/">Services</a>
+        <ul class="dropdown">
+          <li>
+            <a href="/">Management</a>
+          </li>
+          <li>
+            <a href="/">Sales</a>
+          </li>
+          <li>
+            <a href="/">Rental</a>
+          </li>
+        </ul>
       </li>
-      <!-- <li class="services">
-                <a href="/">Services</a>
-                <ul class="dropdown">
-                    <li>
-                        <a href="/">Management</a>
-                    </li>
-                    <li>
-                        <a href="/">Sales</a>
-                    </li>
-                    <li>
-                        <a href="/">Rental</a>
-                    </li>
-                </ul>
-            </li> -->
       <li>
-        <a routerLink="./rental">Find a home</a>
+        <a routerLink="./rental"> Properties For Sale </a>
+      </li>
+      <li>
+        <a routerLink="./rental"> Properties to rent </a>
       </li>
       <!-- <li>
         <a routerLink="./rental">houses</a>
       </li> -->
+      <li>
+        <a routerLink="./aboutus">About us</a>
+      </li>
       <li>
         <a routerLink="./contactus">Contact us</a>
       </li>

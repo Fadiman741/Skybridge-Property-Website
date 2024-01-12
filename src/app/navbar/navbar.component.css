@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 20px;
     color: #191818;
-    height: 4vh;
+    height: 50px;
 }
 h1{
     font-weight: 700;
@@ -15,7 +15,7 @@ h1{
 
 }
 .nav-links a {
-    color: #201f1f;
+    color: rgb(90, 169, 168);
 }
 
 
