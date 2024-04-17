@@ -1,4 +1,3 @@
-
 import { Component, Input, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import {PropertyService} from '../../services/property.service'
@@ -7,12 +6,11 @@ import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-
 
 
 @Component({
-  selector: 'app-properties',
-  templateUrl: './properties.component.html',
-  styleUrls: ['./properties.component.css']
+  selector: 'app-rental',
+  templateUrl: './rental.component.html',
+  styleUrls: ['./rental.component.css']
 })
-export class PropertiesComponent implements OnInit {
-
+export class RentalComponent implements OnInit {
   @Input() filteredPropertyList: any[] = [];
 
   faBed=faBed;
@@ -46,7 +44,6 @@ export class PropertiesComponent implements OnInit {
     minBathrooms: '',
     garage: ''
   };
-  salesList: any;
 
   constructor(private router:Router ,private PropertyService:PropertyService) { }
 
@@ -57,7 +54,7 @@ export class PropertiesComponent implements OnInit {
 
     // this.Propertylist();
     // this.filteredPropertyList = this.PropertyService.listProperties;
-    this.filteredPropertyList = this.PropertyService.listProperties.filter(property => property.property_type === "sale")
+    this.filteredPropertyList = this.PropertyService.listProperties.filter(property => property.property_type === "rent")
 
     this.breadCrumbItems = [{ label: 'Home' }, { label: 'About', active: true }];
 
@@ -87,8 +84,6 @@ export class PropertiesComponent implements OnInit {
   // }
   Propertylist() {
     this.propertyList = this.PropertyService.listProperties;
-    this.salesList = this.PropertyService.listProperties.filter(property => property.property_type === "sale")
-    console.log(this.salesList );
     console.log(this.PropertyService.listProperties);
 
 
