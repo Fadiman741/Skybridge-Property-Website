@@ -1,7 +1,8 @@
 //import { Property } from './../../entities/property.entity';
 import { Component, OnInit } from '@angular/core';
 import {PropertyService} from '../../services/property.service';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
 
@@ -43,4 +44,20 @@ export class ViewpropertyComponent implements OnInit {
       }
     });
   }
+    carouselOptions: OwlOptions = {
+      loop: true,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: false,
+      dots: true,
+      navSpeed: 600,
+      navText: ['&#8249', '&#8250;'],
+      responsive: {
+        0: {
+          items: 1 
+        },
+        
+      },
+      nav: true
+    }
 }

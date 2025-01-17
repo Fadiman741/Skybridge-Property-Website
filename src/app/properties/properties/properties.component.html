@@ -6,7 +6,7 @@
         rgba(39, 22, 19, 0.096),
         rgba(22, 29, 37, 0.65)
       ),
-      url('https://content.knightfrank.com/images/knightfrank.co.za/homepage/heading-banner/mouille-point.jpg');
+      url('https://www.ecoprops.co.za/images/slide-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   "
@@ -145,35 +145,51 @@
     </div>
     <div class="container">
       <!-- Property Card 1 -->
-      <div
-        class="property-card"
-        *ngFor="
-          let item of filteredPropertyList
-            | paginate : { itemsPerPage: pageSize, currentPage: p }
-        "
-      >
-        <a [routerLink]="['/property', item.id, item.province, item.type]">
-          <div class="property-image">
-            <img src="{{ item.image }}" />
-          </div>
-          <div class="property-details">
-            <!-- <p class="property-title">{{ item.type }}</p> -->
-
-            <p class="property-price">R {{ item.price }}</p>
-            <p class="property-location">{{ item.address }}</p>
-            <p class="property-location">{{ item.type }}</p>
-            <div class="property-features">
-              <div style="display: flex; justify-content: space-between">
-                <p>{{ item.rooms }} Bedrooms</p>
-                <p>{{ item.bathrooms }} Bathrooms</p>
-                <p>{{ item.size }} sq ft</p>
-              </div>
-              <!-- <p>{{ item.rooms }} Bedrooms</p>
-              <p>{{ item.bathrooms }} Bathrooms</p>
-              <p>{{ item.size }} sq ft</p> -->
+      <div class="property-card"   *ngFor=" let item of filteredPropertyList | paginate : { itemsPerPage: pageSize, currentPage: p } " >
+      <div class="card-grid">
+        <div class="card">
+          <a [routerLink]="['/property', item.id, item.province, item.type]" class="card-link">
+            <div class="card-image">
+              <!-- <owl-carousel-o [options]="carouselOptions" class="card-image">
+                <ng-container *ngFor="let img of item.images">
+                  <ng-template carouselSlide>
+                    <img [src]="img" alt="House" class="w-full h-48 object-cover rounded-md">
+                  </ng-template>
+                </ng-container>
+              </owl-carousel-o> -->
+              <img src="{{ item.image }}" alt="House">
+              <span class="badge badge-category">{{item.category}}</span>
+              <span class="badge badge-star"><i class="fa fa-star"> 4</i></span>
+              <div class="badge badge-camera"><i class="fa fa-camera"> </i>  {{ item.images.length}}</div>
+              <div class="badge badge-heart"><i class="fa fa-heart"></i></div>
             </div>
-          </div>
-        </a>
+            <div class="card-content">
+              <h2 class="card-title">1000 yards (Brand New) Bungalow Available in...</h2>
+              <p class="card-price"><span>R</span> {{ item.price }} /Sqft</p>
+              <p class="card-description">6 bedrooms Architect designed Imported fixtures and fittings Full basement Top of the [more]</p>
+              <div class="card-features">
+                <p><i class="fa fa-bed"></i> {{ item.rooms }}</p>
+                <p><i class="fa fa-bath"></i>{{ item.bathrooms }}</p>
+                <p><i class="fa fa-home"></i> {{ item.size }} Sqlft<sup>2</sup></p>
+              </div>
+              <div class="card-footer">
+                <div class="owner-info">
+                  <div class="owner-avatar">
+                    <img src="{{ item.agent.image }}" style="width: 100%;border-radius: 50%;" />
+                  </div>
+                  <p> {{item.agent.name}}</p>
+                </div>
+                <div class="contact-buttons">
+                  <button><i class="fa fa-instagram"></i></button>
+                  <button><i class="fa fa-facebook"></i></button>
+                  <button><i class="fa fa-linkedin"></i></button>
+                  <button><i class="fa fa-phone"></i></button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
       </div>
     </div>
     <div style="padding: 15px">
@@ -182,12 +198,5 @@
         (pageChange)="pageChanged($event)"
       ></pagination-controls>
     </div>
-
-    <!-- <footer style="bottom: 0px; background-color: #eee">
-      <p style="text-align: center; padding-top: 10px">
-        &copy; 2023 Allrights reserved :
-        <a href="https://fadimantech.co.za/">FadimanTech</a>
-      </p>
-    </footer> -->
   </div>
 </div>

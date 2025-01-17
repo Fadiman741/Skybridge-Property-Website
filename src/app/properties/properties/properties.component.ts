@@ -178,5 +178,13 @@ export class PropertiesComponent implements OnInit {
     // After sorting, reset the pagination to the first page
     this.p = 1;
   }
-
+  carouselOptions = {
+    items: 1,
+    dots: true,
+    nav: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000, // 3 seconds per image
+    autoplayHoverPause: true
+  };
 }

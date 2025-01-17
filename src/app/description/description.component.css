@@ -4,118 +4,158 @@
     width: 100%;
 }
 .dark{
-    background-color: #f5f5f5;
+    background-color: #0174E1;
 }
 
+.card-grid {
+    padding: 10px;
+  }
 
-/* .description .row {
-    margin-top: 5%;
-    margin-bottom: 10%;
-}
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.description .row p,
-h1 {
-    margin-top: 7%;
-    text-align: center;
-    color: #555454;
-}
+  .card:hover {
+    transform: translateY(-10px);
+  }
 
-.description .row h2 {
-    text-align: center;
-    color: #555454;
-}
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
 
-.description .row p {
-    font-family: 'Titillium Web', sans-serif !important;
-    font-size: 17px;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.7em;
-    color: #555454;
-}
+  .card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
 
-.description .column {
-    float: left;
-    width: 23%;
-    margin: 1%;
-}
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
 
+  .card:hover .card-image img {
+    transform: scale(1.1);
+  }
 
+  .badge {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
 
+  .badge-category {
+    top: 10px;
+    right: 10px;
+    background-color: #1f93ff;
+    color: #fff;
+  }
 
-.description .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+  .badge-star {
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+  }
 
-@media screen and (max-width: 767px) {
-    .description .column {
-        width: 92%;
-        margin: 4%;
-    }
-}
+  .badge-camera, .badge-heart {
+    bottom: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
 
-.about-section {
-    padding: 30px;
-    text-align: left;
-    background-color: #f0438e;
-    color: white;
-}
+  .badge-camera {
+    left: 10px;
+  }
 
-.about-section h3 {
-    font-size: 50px;
-    padding-top: 50px;
-}
+  .badge-heart {
+    right: 10px;
+  }
 
-.about-section p {
-    padding-bottom: 50px;
-}
+  .card-content {
+    padding: 15px;
+  }
 
-.property .column {
-    float: left;
-    width: 40%;
-    margin: 4%;
-    color: #555454;
-}
-
-.property .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.property .column h3,
-p,
-h2 {
-    padding: 7px;
-}
-
-@media screen and (max-width: 767px) {
-    .property .column {
-        width: 92%;
-        margin: 4%;
-    }
-} */
-
-body {
-    font-family: Inter,arial,sans-serif;
-    background-color: #f0f0f0;
-}
-
-.description {
-    /* max-width: 1250px; */
-    margin: auto;
-    padding: 20px;
-    background-color: #2d1424;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-h1 {
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
     color: #333;
-    font-size: 36px;
+    margin: 0 0 10px;
+  }
+
+  .card-price {
+    color: #0174E1;
+    font-weight: bold;
     margin-bottom: 10px;
-}
+  }
+
+  .card-price span {
+    font-size: 12px;
+  }
+
+  .card-description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .card-features {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .owner-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .owner-avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .contact-buttons button {
+    background-color: #0174E1;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+
+  .contact-buttons button:hover {
+    background-color: #015bb5;
+  }
+/*  */
+
 
 .column {
     background-color: #f5f4f4;
@@ -126,150 +166,20 @@ h1 {
 
 h2 {
     color: #333;
-    font-size: 21px;
+    font-size: 25px;
     margin-top: 0;
         font-family: BrandonGrotesque-light;
 }
 
-p {
-    color: #575757;
-    font-size: 15px;
-    padding: 15px;
-    line-height: 1.6;
-
-    /* text-align: center; */
-}
 
 .about-section {
-    /* max-width: 1250px; */
     margin: auto;
-    /* padding: 20px; */
-    background-image: linear-gradient(45deg, rgba(39, 22, 19, 0.65), rgba(22, 29, 37, 0.75)), url('https://www.responsiveclassroom.org/wp-content/uploads/2019/11/MS-student-group-conversation-1024x683.jpeg');
+    background-image: linear-gradient(45deg, rgba(39, 22, 19, 0.65), rgba(22, 29, 37, 0.75)), url('https://boutique-homes-prod.sfo3.cdn.digitaloceanspaces.com/properties/3921/k20-villa_cape-town-south-africa_exterior-facade-1731384217124.jpg');
     background-position: center;
     background-size: cover;
     color: #fff;
-    text-align: center;
     min-height: 500px;
 }
-
-.property {
-    max-width: 1250px;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.property .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.column {
-    flex-basis: calc(25% - 20px);
-}
-
-.property h3 {
-    color: #333;
-    font-size: 20px;
-    padding-top: 10px;
-
-    margin-top: 0;
-}
-
-.property p {
-    color: #9c9c9c;
-    font-size: 15px;
-}
-
-.property h2 {
-    color: #2d1424;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.property img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.property button {
-    display: flex;
-    justify-content: center;
-    background-color: #321b37;
-    border-radius: 30px;
-    height: 45px;
-    padding: 10px;
-    color: #fff;
-    border: none;
-    width: 150px;
-    font-size: larger;
-    cursor: pointer;
-    margin: 20px auto;
-}
-
-.property button a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.services {
-    /* background-color: #fff; */
-    /* border-radius: 10px; */
-    padding: 20px;
-    /* margin-top: 70px; */
-    text-align: center;
-    bottom: 0px;
-    align-items: center;
-    max-width: 1600px;
-    /* background-color: #ffffff; */
-
-}
-
-h1 {
-    color: #f0438e;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.items {
-    display: flex;
-    justify-content: space-around;
-    /* background-color: #2d1424; */
-}
-
-.items div {
-    flex: 1;
-    padding: 20px;
-}
-
-.items button {
-    /* background-color: #f0438e; */
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 30px;
-    color: #f0438e;
-    cursor: pointer;
-    background-color:rgb(90, 169, 168);
-
-}
-
-
-
-.get-started {
-    background-color: rgb(90, 169, 168);
-    color: white;
-    /* border-radius: 10px; */
-    padding: 10px 20px;
-    font-size: 20px;
-    margin-top: 40px;
-    width: 210px;
-    margin: 0 auto;
-}
-
 
 @media screen and (max-width: 767px) {
     .services {

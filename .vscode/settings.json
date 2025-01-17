@@ -1,0 +1,7 @@
+{
+        "editor.tabSize": 16,
+        "workbench.tree.indent": 16,
+        "editor.wrappingIndent": "deepIndent",
+        "html.format.wrapAttributesIndentSize": 800,
+        "indentColorizer.colorOnWhiteSpaceOnly": true
+}

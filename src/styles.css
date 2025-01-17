@@ -103,7 +103,7 @@ body {
     transform: translate(-50%, -50%);
 }
 .ngx-pagination .current{
-    background-color: rgb(90, 169, 168);
+    background-color: #0174E1;
 }
 /* width */
 ::-webkit-scrollbar {

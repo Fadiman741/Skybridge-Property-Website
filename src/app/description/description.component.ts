@@ -41,6 +41,22 @@ export class DescriptionComponent implements OnInit {
     
 
   }
+  carouselOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+      0: {
+        items: 1 
+      },
+      
+    },
+    nav: true
+  }
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -65,6 +81,7 @@ export class DescriptionComponent implements OnInit {
     },
     nav: true
   }
+  
   Propertylist() {
     this.propery_for_rental = this.PropertyService.listProperties;
     console.log(this.PropertyService.listProperties);

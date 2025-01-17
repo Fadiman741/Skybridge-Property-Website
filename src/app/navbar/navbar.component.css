@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    color: #191818;
+    background-color: #0174E1;
     height: 50px;
 }
 h1{
@@ -15,7 +15,7 @@ h1{
 
 }
 .nav-links a {
-    color: rgb(90, 169, 168);
+    color: #f3f5f7;
 }
 
 
@@ -40,14 +40,14 @@ a{
 }
 
 .menu li:hover {
-    background-color: #2d1424;
+    background-color: #080697;
     border-radius: 5px;
     transition: 0.3s ease;
     color: #eee;
 }
 
 .menu li a{
-    padding: 5px 5px;
+    padding: 5px 10px;
 }
 
 
