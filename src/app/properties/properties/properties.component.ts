@@ -1,10 +1,7 @@
-
 import { Component, Input, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
-import {PropertyService} from '../../services/property.service'
-//import { Property } from './../../entities/property.entity';
-import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
-
+import { Router } from '@angular/router';
+import { PropertyService } from '../../services/property.service';
+import { faBed, faBath, faCar, faHouse, faSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-properties',
@@ -14,146 +11,80 @@ import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-
 export class PropertiesComponent implements OnInit {
 
   @Input() filteredPropertyList: any[] = [];
-
-  faBed=faBed;
-  faBath=faBath;
-  faCar=faCar;
-  faHouse=faHouse;
+  faBed = faBed;
+  faBath = faBath;
+  faCar = faCar;
+  faHouse = faHouse;
   faSquare = faSquare;
-  
+
   breadCrumbItems: Array<{}> = [];
-
-
   page: number = 1;
   count: number = 0;
   tableSize: number = 5;
   tableSizes: any = [3, 6, 9, 12];
-
   
   propertyList: any[] = [];
-  
-   pagedItems: any[]=[]
-  pageSize = 6 // Number of items per page
-  p = 1; // Initial page
+  pagedItems: any[] = [];
+  pageSize: number = 9;  // Number of items per page
+  p = 1;  // Initial page
 
-   filters: any = {
+  filterOptions = {
     propertyType: '',
     location: '',
-    propertyType2: '',
     minPrice: '',
     maxPrice: '',
-    minRooms: '',
-    minBathrooms: '',
-    garage: ''
+    rooms: '',
+    bathrooms: '',
+    garages: ''
   };
-  salesList: any;
 
-  constructor(private router:Router ,private PropertyService:PropertyService) { }
+
+  constructor(private router: Router, private propertyService: PropertyService) { }
 
   ngOnInit() {
-    // this.retrievePropertyData()
-    // console.log(this.retrievePropertyData())
-
-
-    // this.Propertylist();
-    // this.filteredPropertyList = this.PropertyService.listProperties;
-    this.filteredPropertyList = this.PropertyService.listProperties.filter(property => property.property_type === "sale")
-
+    this.loadProperties();
     this.breadCrumbItems = [{ label: 'Home' }, { label: 'About', active: true }];
+  }
 
+  loadProperties() {
+    // Assuming PropertyService has a method to fetch properties
+    this.propertyList = this.propertyService.listProperties;
+    this.filteredPropertyList = this.propertyList.filter(property => property.property_type === "sale");
   }
-  // retrievePropertyData() {
-  //   this.PropertyService.fetchAllProperties()
-  //     .subscribe(
-  //       data => {
-  //         this.propertyList = data;
-  //         console.log(data);
-  //       },
-  //       error => {
-  //         console.log(error);
-  //       });
-  // }
-  onTableDataChange(event: any) {
-    this.page = event;
-    this.propertyList;
-  }
-  onTableSizeChange(event: any): void {
-    this.tableSize = event.target.value;
-    this.page = 1;
-    this.propertyList;
-  }
-  // ViewProperty(){
-  //   this.router.navigate("['/property', property.id, property.province, property.property_type]"]);
-  // }
-  Propertylist() {
-    this.propertyList = this.PropertyService.listProperties;
-    this.salesList = this.PropertyService.listProperties.filter(property => property.property_type === "sale")
-    console.log(this.salesList );
-    console.log(this.PropertyService.listProperties);
 
-
-  }
-  // applyFilter() {
-  //   // Implement your filtering logic based on filterParams
-  //   // For simplicity, let's filter by property type and location in this example
-  //   this.filteredPropertyList =  this.PropertyService.listProperties.filter(property => {
-  //     return (
-  //       (this.filterParams.propertyType === '' || property.property_type === this.filterParams.propertyType) &&
-  //       (this.filterParams.location === '' || property.province === this.filterParams.location)
-  //     );
-  //   });
-  //   console.log(this.filteredPropertyList);
-  // }
-  // applyFilter() {
-  //   this.filteredPropertyList = this.PropertyService.listProperties.filter(property => {
-  //     return (
-  //       (this.filters.propertyType === '' || property.property_type === this.filters.propertyType) &&
-  //       (this.filters.location === '' || property.province === this.filters.location) &&
-  //       (this.filters.propertyType2 === '' || property.type === this.filters.propertyType2) &&
-  //       (this.filters.minPrice === '' || parseInt(property.price.replace(/\D/g, '')) >= parseInt(this.filters.minPrice.replace(/\D/g, ''))) &&
-  //       (this.filters.maxPrice === '' || parseInt(property.price.replace(/\D/g, '')) <= parseInt(this.filters.maxPrice.replace(/\D/g, ''))) &&
-  //       (this.filters.minRooms === '' || property.rooms >= parseInt(this.filters.minRooms)) &&
-  //       (this.filters.minBathrooms === '' || property.bathrooms >= parseInt(this.filters.minBathrooms)) &&
-  //       (this.filters.garage === '' || property.garage >= parseInt(this.filters.garage))
-  //     );
-  //   });
-  // }
   setPage(page: number) {
     this.p = page;
-    this.pagedItems = this.propertyList.slice((page - 1) * this.pageSize, page * this.pageSize);
+    this.pagedItems = this.filteredPropertyList.slice((page - 1) * this.pageSize, page * this.pageSize);
   }
 
   pageChanged(event: any) {
     this.setPage(event);
   }
-  filterOptions = {
-    propertyType: '',
-    location: '',
-    propertyCategory: '',
-    minPrice: '',
-    maxPrice: '',
-    bedrooms: '',
-    bathrooms: '',
-    garage: '',
-  };
+
+  onTableSizeChange(event: any): void {
+    this.tableSize = event.target.value;
+    this.p = 1;
+    this.setPage(this.p);
+  }
+
   applyFilter() {
-    // Filter based on the selected criteria
-    this.filteredPropertyList = this.propertyList.filter((item) => {
+    const { propertyType, location, minPrice, maxPrice, rooms, bathrooms, garages } = this.filterOptions;
+    this.filteredPropertyList = this.filteredPropertyList.filter((property) => {
       return (
-        (this.filterOptions.propertyType === '' || item.propertyType === this.filterOptions.propertyType) &&
-        (this.filterOptions.location === '' || item.location === this.filterOptions.location) &&
-        (this.filterOptions.propertyCategory === '' || item.propertyCategory === this.filterOptions.propertyCategory) &&
-        (this.filterOptions.minPrice === '' || item.price >= +this.filterOptions.minPrice) &&
-        (this.filterOptions.maxPrice === '' || item.price <= +this.filterOptions.maxPrice) &&
-        (this.filterOptions.bedrooms === '' || item.bedrooms === this.filterOptions.bedrooms) &&
-        (this.filterOptions.bathrooms === '' || item.bathrooms === this.filterOptions.bathrooms) &&
-        (this.filterOptions.garage === '' || item.garage === this.filterOptions.garage)
+        (propertyType ? property.type === propertyType : true) &&
+        (location ? property.location === location : true) &&
+        (minPrice ? property.price >= minPrice : true) &&
+        (maxPrice ? property.price <= maxPrice : true) &&
+        (rooms ? property.rooms >= rooms : true) &&
+        (bathrooms ? property.bathrooms >= bathrooms : true) &&
+        (garages ? property.garages >= garages : true)
       );
     });
 
-    // After filtering, reset the pagination to the first page
-    this.p = 1;
+    this.p = 1;  // Reset to first page after applying filter
+    this.setPage(this.p);
   }
+
   sortProperties(event: any) {
     const selectedSortOption = event.target.value;
 
@@ -171,13 +102,13 @@ export class PropertiesComponent implements OnInit {
         this.filteredPropertyList.sort((a, b) => b.price - a.price);
         break;
       default:
-        // Default sorting logic
         break;
     }
 
-    // After sorting, reset the pagination to the first page
-    this.p = 1;
+    this.p = 1;  // Reset to first page after sorting
+    this.setPage(this.p);
   }
+
   carouselOptions = {
     items: 1,
     dots: true,

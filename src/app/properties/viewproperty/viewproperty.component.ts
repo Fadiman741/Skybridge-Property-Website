@@ -3,9 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import {PropertyService} from '../../services/property.service';
 import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
+import { Title, Meta } from '@angular/platform-browser';
 import { faBed,faBath,faCar,faHouse,faSquare} from '@fortawesome/free-solid-svg-icons';
-
 
 @Component({
   selector: 'app-viewproperty',
@@ -34,7 +33,7 @@ export class ViewpropertyComponent implements OnInit {
   totalOnceOffCosts: number = 0;
   minGrossIncome: number = 0;
 
-  constructor(private PropertyService:PropertyService,private route: ActivatedRoute) { }
+  constructor(private PropertyService:PropertyService,private route: ActivatedRoute,private titleService: Title,private metaService: Meta) { }
 
   ngOnInit() {
     // this.retrievePropertyData()
@@ -48,8 +47,38 @@ export class ViewpropertyComponent implements OnInit {
 
       if (!this.property) {
         console.error('Property not found');
+      } else {
+        // Set the page title dynamically
+        this.titleService.setTitle(`${this.property.type} for sale in ${this.property.province} | ${this.property.tagline}`);
+
+        // Set meta description for SEO
+        this.metaService.updateTag({
+          name: 'description',
+          content: `${this.property.tagline} Located at ${this.property.address}, this ${this.property.type} offers ${this.property.rooms} bedrooms and is priced at ${this.property.price}.`
+        });
+
+        // Set meta keywords (optional)
+        this.metaService.updateTag({
+          name: 'keywords',
+          content: `${this.property.type}, ${this.property.category}, ${this.property.province}, ${this.property.tagline}, property for sale, real estate`
+        });
+
+        // You can also set other meta tags like the image for social media previews (Open Graph)
+        this.metaService.updateTag({
+          property: 'og:image',
+          content: this.property.images[0]
+        });
+        this.metaService.updateTag({
+          property: 'og:title',
+          content: `${this.property.type} in ${this.property.province} | ${this.property.tagline}`
+        });
+        this.metaService.updateTag({
+          property: 'og:description',
+          content: `${this.property.tagline} Located at ${this.property.address}, this ${this.property.type} offers ${this.property.rooms} bedrooms and is priced at ${this.property.price}.`
+        });
       }
     });
+
   }
   calculateBond(): void {
     const loanAmount = this.property.price - this.deposit;

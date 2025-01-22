@@ -162,14 +162,14 @@
               </owl-carousel-o> -->
               <img [src]="item.images[0]" alt="House ">
               <span class="badge badge-category">{{item.category}}</span>
-              <span class="badge badge-star"><i class="fa fa-star"> 4</i></span>
+              <span class="badge badge-star"><i class="fa fa-star">{{item.rating}}</i></span>
               <div class="badge badge-camera"><i class="fa fa-camera"> </i>  {{ item.images.length}}</div>
               <div class="badge badge-heart"><i class="fa fa-heart"></i></div>
             </div>
             <div class="card-content">
-              <h2 class="card-title">1000 yards (Brand New) Bungalow Available in...</h2>
-              <p class="card-price"><span>R</span> {{ item.price }} /Sqft</p>
-              <p class="card-description">6 bedrooms Architect designed Imported fixtures and fittings Full basement Top of the [more]</p>
+              <h2 class="card-title">{{item.tagline}}</h2>
+              <p class="card-price"><span>R</span> {{ item.price }} </p>
+              <p class="card-description">{{item.description}}</p>
               <div class="card-features">
                 <p><i class="fa fa-bed"></i> {{ item.rooms }}</p>
                 <p><i class="fa fa-bath"></i>{{ item.bathrooms }}</p>

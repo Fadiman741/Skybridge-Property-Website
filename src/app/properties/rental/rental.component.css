@@ -227,3 +227,19 @@ label {
     color: #555454;
     border: none;
 }
+.card-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;         /* Limit the number of lines */
+    -webkit-box-orient: vertical;  /* Set the orientation to vertical */
+    overflow: hidden;              /* Hide the overflowed content */
+    text-overflow: ellipsis;       /* Add ellipses (...) for overflowed text */
+    height: 40px;
+  }
+  .card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;         /* Limit the number of lines */
+    -webkit-box-orient: vertical;  /* Set the orientation to vertical */
+    overflow: hidden;              /* Hide the overflowed content */
+    text-overflow: ellipsis;       /* Add ellipses (...) for overflowed text */
+    height: 50px;
+  }

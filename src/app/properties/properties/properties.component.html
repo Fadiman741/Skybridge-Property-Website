@@ -13,14 +13,11 @@
     padding-top: 150px;
   "
 >
-  <!-- <app-filter [filteredPropertyList]="filteredPropertyList"></app-filter> -->
   <div
     class="container"
     style="max-width: 800px; background-color:#0175e19a;"
-    (ngSubmit)="applyFilter()"
   >
-    <form class="location" style="width: 100%">
-      <div></div>
+    <form class="location" style="width: 100%" (ngSubmit)="applyFilter()">
       <div class="form1" style="display: flex">
         <div style="width: 25%; margin-left: 7px">
           <label>Property</label>
@@ -33,7 +30,7 @@
 
         <div style="width: 75%">
           <label>Location</label>
-          <select name="location">
+          <select name="location" [(ngModel)]="filterOptions.location">
             <option value="">Any</option>
             <option value="Pretoria Central">Pretoria Central</option>
             <option value="Centurion">Centurion</option>
@@ -43,13 +40,13 @@
         </div>
       </div>
       <div class="form2">
-        <select name="propertytype">
+        <select name="propertyType" [(ngModel)]="filterOptions.propertyType">
           <option value="">Property type</option>
-          <option value="">House</option>
-          <option value="">Apartment</option>
-          <option value="">Commercial Property</option>
+          <option value="house">House</option>
+          <option value="apartment">Apartment</option>
+          <option value="commercial">Commercial Property</option>
         </select>
-        <select name="prices">
+        <select name="minPrice" [(ngModel)]="filterOptions.minPrice">
           <option value="">Min Price</option>
           <option value="0">R 0</option>
           <option value="100000">R 100,000</option>
@@ -64,7 +61,7 @@
           <option value="1000000">R 1,000,000</option>
         </select>
 
-        <select name="prices">
+        <select name="maxPrice" [(ngModel)]="filterOptions.maxPrice">
           <option value="">Max Price</option>
           <option value="400000">R 400,000</option>
           <option value="500000">R 500,000</option>
@@ -81,21 +78,21 @@
         </select>
       </div>
       <div class="form2">
-        <select name="rooms">
-          <option value="">bedrooms</option>
+        <select name="rooms" [(ngModel)]="filterOptions.rooms">
+          <option value="">Bedrooms</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4+</option>
         </select>
-        <select name="rooms">
+        <select name="bathrooms" [(ngModel)]="filterOptions.bathrooms">
           <option value="">Bathrooms</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4+</option>
         </select>
-        <select name="prices">
+        <select name="garages" [(ngModel)]="filterOptions.garages">
           <option value="">Garage</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -105,17 +102,7 @@
       </div>
       <div>
         <button
-          (click)="applyFilter()"
-          style="
-            width: 99%;
-            margin-left: 0.5%;
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f0438e;
-            border: none;
-            color: #fff;
-          "
+          style="width: 99%; margin-left: 0.5%; margin-top: 10px; padding: 10px; border-radius: 5px; background-color: #f0438e; border: none; color: #fff;"
         >
           Search
         </button>
@@ -162,14 +149,14 @@
               </owl-carousel-o> -->
               <img [src]="item.images[0]" alt="House ">
               <span class="badge badge-category">{{item.category}}</span>
-              <span class="badge badge-star"><i class="fa fa-star"> 4</i></span>
+              <span class="badge badge-star"><i class="fa fa-star"> {{item.rating}}</i></span>
               <div class="badge badge-camera"><i class="fa fa-camera"> </i>  {{ item.images.length}}</div>
               <div class="badge badge-heart"><i class="fa fa-heart"></i></div>
             </div>
             <div class="card-content">
-              <h2 class="card-title">1000 yards (Brand New) Bungalow Available in...</h2>
-              <p class="card-price"><span>R</span> {{ item.price }} /Sqft</p>
-              <p class="card-description">6 bedrooms Architect designed Imported fixtures and fittings Full basement Top of the [more]</p>
+              <h2 class="card-title">{{item.tagline}}</h2>
+              <p class="card-price"><span>R</span> {{ item.price }} </p>
+              <p class="card-description">{{item.description}}</p>
               <div class="card-features">
                 <p><i class="fa fa-bed"></i> {{ item.rooms }}</p>
                 <p><i class="fa fa-bath"></i>{{ item.bathrooms }}</p>
