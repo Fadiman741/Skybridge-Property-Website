@@ -1,6 +1,6 @@
 .box{
-    min-height: 300px;
-    padding-top: 30px;
+    min-height: 250px;
+    padding-top: 20px;
     width: 100%;
 }
 .dark{
@@ -166,7 +166,7 @@
 
 h2 {
     color: #333;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 0;
         font-family: BrandonGrotesque-light;
 }

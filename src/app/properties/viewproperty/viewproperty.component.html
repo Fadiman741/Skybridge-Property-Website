@@ -2,36 +2,124 @@
   <div style="max-width: 900px; margin: auto">
     <br />
     <div class="card-image">
-      <!-- <owl-carousel-o [options]="carouselOptions">
+      <owl-carousel-o [options]="carouselOptions">
         <ng-container *ngFor="let img of property.images">
           <ng-template carouselSlide>
-            <img [src]="img" alt="Property Image" class="w-full h-64 object-cover rounded-md" />
+            <img [src]="img" alt="Property Image" class="w-full  object-cover rounded-md " style="height: 100%;"/>
           </ng-template>
         </ng-container>
-      </owl-carousel-o> -->
-      <img [src]="property.images[0]" alt="House " style="width: 100%;">
-      <span class="badge badge-category">{{ property.category }}</span>
-      <span class="badge badge-star"><i class="fa fa-star"> 4</i></span>
-      <div class="badge badge-camera"><i class="fa fa-camera"></i> {{ property.images.length }}</div>
-      <div class="badge badge-heart"><i class="fa fa-heart"></i></div>
+      </owl-carousel-o>
+      <!-- <img [src]="property.images[0]" alt="House " style="width: 100%;"> -->
+      
+      
     </div>
     <div class="row">
       <div class="column left">
         <div class="property-description">
-          <h1 style="color: #0174E1">R {{ property.price }}</h1>
-          <h3>{{ property.province }}</h3>
+          <h1 style="color: #0174E1;margin-top: -10px;" >R{{ property.price }}</h1>
+          <h3 style="margin-top: -10px;">{{ property.province }}</h3>
           <p>{{ property.address }}</p>
           <div class="card-features">
-            <p><i class="fa fa-bed"></i> {{ property.rooms }} Bedrooms</p>
-            <p><i class="fa fa-bath"></i> {{ property.bathrooms }} Bathrooms</p>
-            <p><i class="fa fa-home"></i> {{ property.size }} sq ft</p>
-            <p><i class="fa fa-car"></i> {{ property.garage }} Garage</p>
+            <p style="padding-right: 15px;"><i class="fa fa-bed"></i> {{ property.rooms }} Bedrooms</p>
+            <p style="padding-right: 15px;"><i class="fa fa-bath"></i> {{ property.bathrooms }} Bathrooms</p>
+            <p style="padding-right: 15px;"><i class="fa fa-home"></i> {{ property.size }} sq ft</p>
+            <p style="padding-right: 15px;"><i class="fa fa-car"></i> {{ property.garage }} Garage</p>
+          </div>
+          <div style="display: flex;">
+            <span class="badge badge-category">{{ property.category }}</span>
+            <!-- <span class="badge badge-star"><i class="fa fa-star"> 4</i></span> -->
+            <div class="badge badge-camera"><i class="fa fa-camera"></i> {{ property.images.length }}</div>
+            <div class="badge badge-heart"><i class="fa fa-heart"></i></div>
           </div>
         </div>
         <div class="property-description">
-          <h2><b>Property Description</b></h2>
-          <hr />
+          <h3 style="margin-top: -10px;color: #0174E1"><b>Property Description</b></h3>
+          <hr style="border-bottom: none;margin-top: -10px;border-color: dimgray;" />
           <p>{{ property.description }}</p>
+        </div>
+        <div class="property-description">
+          <table border="none" cellspacing="0" cellpadding="8">
+            <tr>
+              <td>Listing Number</td>
+              <td>115147132</td>
+            </tr>
+            <tr>
+              <td>Type of Property</td>
+              <td>Apartment / Flat</td>
+            </tr>
+            <tr>
+              <td>Street Address</td>
+              <td>115 The Austin, 55 Austin road, Glen Austin AH</td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>New Development, First Floor</td>
+            </tr>
+            <tr>
+              <td>Listing Date</td>
+              <td>30 October 2024</td>
+            </tr>
+            <tr>
+              <td>Levies</td>
+              <td>R 1 417</td>
+            </tr>
+            <tr>
+              <td>No Transfer Duty</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Rates and Taxes</td>
+              <td>R 334</td>
+            </tr>
+            <tr>
+              <td>Pets Allowed</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Floor Number</td>
+              <td>1</td>
+            </tr>
+          </table>
+        </div>
+        <div class="property-description" style="display: flex;flex-wrap: wrap;">
+          <div style="max-width: 160px;max-height: 160px;margin: 5px;"  *ngFor=" let item of property.images">
+            <img [src]="item" style="width: 100%;height: 100%;" />
+          </div>
+        </div>
+        <div class="property-description">
+          <div class="bond-calculator">
+            <div style="display: flex;justify-content: space-between;">
+              <!-- <h3 style="margin-top: -0px;">Bond Calculator</h3> -->
+              <!-- <h1 style="color: #0174E1;margin-top: -10px;" >R{{ property.price }}</h1> -->
+            </div>
+            <div style="display: flex;">
+              <div style="width: 50%;background-color:  #eef0f8;border-radius: 10px;padding: 5px;">
+                <div style="display: flex;justify-content: space-evenly;padding-top:10px ;">
+                  <label for="deposit">Deposit (Optional):</label>
+                  <input  id="deposit" [(ngModel)]="deposit" placeholder="Enter deposit amount">
+                </div>
+                <div style="display: flex;justify-content: space-evenly;">
+                  <label for="interestRate">Interest Rate ( % )    :</label>
+                  <input  id="interestRate" [(ngModel)]="interestRate" placeholder="Enter interest rate">
+                </div>
+                <div style="display: flex;justify-content: space-evenly;">
+                  <label for="loanTerm">Loan Term (Years):</label>
+                  <input  id="loanTerm" [(ngModel)]="loanTerm" placeholder="Enter loan term">
+                </div>
+                <button (click)="calculateBond()" style="padding:10px 0;width: 96%;">Calculate</button>
+              </div>
+              <div style="width: 50%;padding-top: 50px;">
+                <div *ngIf="monthlyRepayment">
+                  <p style="text-align: center;"><strong>Monthly Repayment:</strong>  R {{ monthlyRepayment | number: '1.0-2' }}</p>
+                  <p style="text-align: center;"><strong>Total Once-off Costs:</strong> R {{ totalOnceOffCosts | number: '1.0-2' }}</p>
+                  <p style="text-align: center;"><strong>Min Gross Monthly Income:</strong> R {{ minGrossIncome | number: '1.0-2' }}</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p style="font-size: xx-small;">*Disclaimer: Please note that by default this calculator uses the prime interest rate for bond payment calculations. This is purely for convenience and not an indication of the interest rate that might be offered to you by a bank. This calculator is intended to provide estimates based on the indicated amounts, rates and fees. Whilst we make every effort to ensure the accuracy of these calculations, we cannot be held liable for inaccuracies. Property24 does not accept liability for any damages arising from the use of this calculator. </p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="column right">
@@ -56,90 +144,3 @@
     <br />
   </div>
 </div>
-
-<!--  -->
-<div style="background-color: #f5f5f5; display: none;">
-  <div style="max-width: 900px; margin: auto">
-    <br />
-    <div>
-      <img src="{{ property.image }}" style="width: 100%" />
-    </div>
-    <div class="row">
-      <div class="column left">
-        <div class="property">
-          <div class="property-description">
-            <div class="property-description2">
-              <h1 style="color: #0174E1">{{ property.price }}</h1>
-              <h3>{{ property.province }}</h3>
-              <p>{{ property.address }}</p>
-
-              <div class="house-specification" valign="bottom">
-                <ul class="items">
-                  <!-- <li>
-                                        <fa-icon [icon]="faBed"></fa-icon> 2</li>
-                                    <li>
-                                        <fa-icon [icon]="faBath"></fa-icon> 4</li>
-                                    <li>
-                                        <fa-icon [icon]="faCar"></fa-icon> 1</li>
-                                    <li>
-                                        <fa-icon [icon]="faHouse"></fa-icon> 1200 m<sup style="font-size: 9px;">2</sup></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="property-description">
-            <h2 style="padding-bottom: 5px"><b>Property description</b></h2>
-            <hr />
-            <p>{{ property.description }}</p>
-            <!-- <p>Fibre internet connectivity</p>
-            <p>Prepaid water & electricity meters</p>
-            <p>Clubhouse with braai facilities</p>
-            <p>Kids play fountain</p> -->
-          </div>
-          <div class="property-description">
-            <h2 style="padding-bottom: 5px"><b>Property Overview</b></h2>
-            <hr />
-            <!-- <p>Final Phase Launching now!</p> -->
-            <p>{{ property.rooms }} Bedrooms</p>
-            <p>{{ property.bathrooms }} Bathrooms</p>
-            <p>{{ property.size }} sq ft</p>
-            <p>{{ property.garage }} garage</p>
-
-            <!-- <p>Fibre internet connectivity</p>
-            <p>Prepaid water & electricity meters</p>
-            <p>DSTV plug and play Lifestyle</p>
-            <p>Clubhouse with braai facilities</p> -->
-          </div>
-        </div>
-      </div>
-      <div class="column right">
-        <div class="agent">
-          <div class="agent-details" style="background-color: #fff">
-            <div style="width: 130px; border-radius: 50%">
-              <img
-                src="https://images.prop24.com/273080775/Crop508x373"
-                style="width: 100%"
-              />
-            </div>
-            <h2>John Doe</h2>
-            <button>Contact</button>
-          </div>
-          <div class="agent-details" style="background-color: #fff">
-            <h2>socials</h2>
-            <div>
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-twitter"></a>
-              <a href="#" class="fa fa-google"></a>
-              <a href="#" class="fa fa-linkedin"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
-</div>
-

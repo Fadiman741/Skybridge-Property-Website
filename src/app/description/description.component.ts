@@ -4,7 +4,8 @@ import { faBuilding} from '@fortawesome/free-regular-svg-icons';
 import { faBook,faMagnifyingGlassChart,faHouse,faChartSimple} from '@fortawesome/free-solid-svg-icons';
 import { faBed,faBath,faCar,faSquare} from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import {PropertyService} from '../services/property.service'
+import {PropertyService} from '../services/property.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -29,10 +30,21 @@ export class DescriptionComponent implements OnInit {
   rental_property: any;
   sale_property: any;
 
-  constructor(private router:Router,private PropertyService:PropertyService) { }
+  constructor(private router:Router,private PropertyService:PropertyService,private meta: Meta, private title: Title) { }
 
   ngOnInit() {
     this.Propertylist();
+    this.title.setTitle('SkyBridge Property Management | Marketing & Letting');
+    this.meta.addTags([
+      { name: 'description', content: 'SkyBridge offers marketing, letting, and property management solutions in South Africa' },
+      { name: 'keywords', content: 'SkyBridge, property management, marketing, letting, South Africa,pretoria' },
+      { name: 'author', content: 'SkyBridge' },
+      { property: 'og:title', content: 'SkyBridge Property Management | Marketing & Letting' },
+      { property: 'og:description', content: 'SkyBridge offers marketing, letting, and property management solutions in Milnerton, Cape Town.' },
+      { property: 'og:image', content: 'https://img.freepik.com/free-vector/smart-home-technology-set-icon_24877-52884.jpg' },
+      { property: 'og:url', content: 'https://www.skybridge.com' }
+      
+    ]);
   }
 
   routeToRental(){

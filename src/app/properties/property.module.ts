@@ -13,7 +13,7 @@ import {PropertyroutingModule} from './property-routing.module';
 import { PropertyFilterPipe } from '../pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { RentalComponent } from './rental/rental.component';
-// import { OwlModule } from 'ngx-owl-carousel-o';
+  import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { RentalComponent } from './rental/rental.component';
     PropertyroutingModule,
     NgxPaginationModule,
     FontAwesomeModule,
-    // OwlModule,
+    CarouselModule,
     FormsModule
   ],
   declarations: [PropertiesComponent,RentalComponent,ViewpropertyComponent,FilterComponent,  PropertyFilterPipe]

@@ -2,6 +2,9 @@
     display: flex;
 
   }
+  .card-image{
+    /* height: 500px; */
+  }
 
   .column.left {
     flex: 65%;
@@ -82,4 +85,78 @@
 
   button:hover {
     background-color: #015bb5;
+  }
+  p{
+    color: #444444;
+    font-size: 14px;
+  }
+  .card-features{
+    display: flex;
+  }
+  .badge{
+    padding:5px 10px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #015bb5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    color: #444444;
+    font-size: 14px;
+    border: none;
+  }
+
+  tr:nth-child(even) {
+    background-color: #eef0f8;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .bond-calculator {
+    /* margin-top: 20px; */
+    /* padding: 20px; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    /* background-color: #f9f9f9; */
+  }
+
+  .bond-calculator input {
+    width: 100px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #007BFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  label{
+    color: #444444;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .bond-calculator button {
+    width: 100%;
+    /* padding: 10px; */
+    /* margin: 5px; */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .bond-calculator button:hover {
+    background-color: #0056b3;
   }

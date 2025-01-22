@@ -26,6 +26,13 @@ export class ViewpropertyComponent implements OnInit {
   property:any;
 
   propertyList  : any[] = [];
+  deposit: number = 0;
+  interestRate: number = 7.5; // Default interest rate in %
+  loanTerm: number = 20;      // Default loan term in years
+
+  monthlyRepayment: number = 0;
+  totalOnceOffCosts: number = 0;
+  minGrossIncome: number = 0;
 
   constructor(private PropertyService:PropertyService,private route: ActivatedRoute) { }
 
@@ -44,12 +51,27 @@ export class ViewpropertyComponent implements OnInit {
       }
     });
   }
+  calculateBond(): void {
+    const loanAmount = this.property.price - this.deposit;
+    const monthlyInterestRate = this.interestRate / 100 / 12;
+    const numberOfPayments = this.loanTerm * 12;
+
+    // Monthly repayment formula
+    this.monthlyRepayment = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) /
+                            (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+
+    // Estimated once-off costs (e.g., transfer fees)
+    this.totalOnceOffCosts = this.property.price * 0.05;
+
+    // Minimum gross income required (typically 3x monthly repayment)
+    this.minGrossIncome = this.monthlyRepayment * 3;
+  }
     carouselOptions: OwlOptions = {
       loop: true,
       mouseDrag: true,
       touchDrag: true,
       pullDrag: false,
-      dots: true,
+      dots: false,
       navSpeed: 600,
       navText: ['&#8249', '&#8250;'],
       responsive: {

@@ -151,6 +151,7 @@
 /*  */
 .container {
     max-width: 1200px;
+    
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -206,10 +207,10 @@ label {
 
 .form2 select {
     font-size: 0.8rem;
-    padding: 5px 5px;
+    padding: 5px 15px;
     width: 32.30%;
     margin: 0.5%;
-    height: 30px;
+    height: 45px;
 
     border: none;
     color: #555454;
@@ -218,10 +219,10 @@ label {
 
 .form1 select {
     font-size: 0.8rem;
-    padding: 5px 5px;
+    padding: 5px 15px;
     width: 99%;
 
-    height: 35px;
+    height: 45px;
 
     color: #555454;
     border: none;

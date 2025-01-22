@@ -9,12 +9,14 @@
       url('https://www.ecoprops.co.za/images/slide-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 450px;
+    padding-top: 150px;
   "
 >
   <!-- <app-filter [filteredPropertyList]="filteredPropertyList"></app-filter> -->
   <div
     class="container"
-    style="max-width: 800px; background-color: rgba(90, 169, 168, 0.5)"
+    style="max-width: 800px; background-color:#0175e19a;"
     (ngSubmit)="applyFilter()"
   >
     <form class="location" style="width: 100%">
@@ -105,8 +107,9 @@
         <button
           (click)="applyFilter()"
           style="
-            width: 98%;
-            margin: 1%;
+            width: 99%;
+            margin-left: 0.5%;
+            margin-top: 10px;
             padding: 10px;
             border-radius: 5px;
             background-color: #f0438e;
@@ -125,7 +128,7 @@
     <br />
     <div
       style="
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
         display: flex;
         justify-content: flex-end;
@@ -157,7 +160,7 @@
                   </ng-template>
                 </ng-container>
               </owl-carousel-o> -->
-              <img src="{{ item.image }}" alt="House">
+              <img [src]="item.images[0]" alt="House ">
               <span class="badge badge-category">{{item.category}}</span>
               <span class="badge badge-star"><i class="fa fa-star"> 4</i></span>
               <div class="badge badge-camera"><i class="fa fa-camera"> </i>  {{ item.images.length}}</div>

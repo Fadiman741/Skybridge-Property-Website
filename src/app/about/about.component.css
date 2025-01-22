@@ -1,6 +1,5 @@
+/* General Styles */
 .column {
-    /* float: left; */
-
     margin-bottom: 16px;
     font-family: "P24-SourceSans", Helvetica, Arial, sans-serif;
     font-size: 15px;
@@ -8,55 +7,31 @@
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
     background-color: #fff;
-    /* border-radius: 25px; */
 }
 
-.card p {
+.card p, .card h2 {
     padding: 10px;
     color: #555454;
 }
 
-.card h2 {
-    padding-left: 10px;
-    color: #555454;
-}
-
+/* About Section */
 .about-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    height: 500px;
-    padding-right: 20px;
+    padding: 55px 20px;
+    height: 400px;
     text-align: center;
     background-color: #2d1424;
-    background-image: linear-gradient(45deg, rgba(90, 169, 168, 0.288), rgba(90, 169, 168, 0.267)), url('https://www.ecoprops.co.za/images/slide-1.jpg');
-        /* background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200"); */
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-image: linear-gradient(45deg, rgba(10, 10, 10, 0.671), rgba(34, 34, 34, 0.712)), url('https://www.ecoprops.co.za/images/slide-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
-.about-content{
-    /* background-image: linear-gradient(45deg, rgba(90, 169, 168, 0.514), rgba(90, 169, 168, 0.507)), url('https://www.ecoprops.co.za/images/slide-1.jpg'); */
-    /* background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/15/13/istock-671323338.jpg?width=1200"); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-color: #f5f5f5; */
-}
 
-.section{
-    background-color: #0174E1;
-}
-.title {
-    color: grey;
-    padding: 10px;
-}
-
+/* Button Styles */
 .button {
     border: none;
-    /* border-radius: 20px; */
     outline: 0;
     display: inline-block;
     color: white;
@@ -64,7 +39,6 @@
     text-align: center;
     cursor: pointer;
     width: 100%;
-    /* height: 35px; */
     padding: 12px;
 }
 
@@ -72,26 +46,13 @@
     background-color: #555;
 }
 
-@media screen and (max-width: 767px) {
-    .column {
-        width: 100%;
-    }
-    .about-company {
-        width: 100%;
-    }
-}
-
-.column1 {
-    min-height: 200px;
-    
-}
+/* Bundle Section */
 .bundle {
-
     display: flex;
     justify-content: space-around;
 }
 
-.bundle .column1 h2 {
+.bundle .column1 h2,  .service h2 {
     text-align: center;
     padding: 10px;
     color: #0174E1;
@@ -106,129 +67,259 @@
 }
 
 .bundle fa-icon {
-    text-align: center;
-    width: 100%;
     font-size: 50px;
     color: #0174E1;
     padding-top: 40px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.bunlde:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 767px) {
-    .bundle {
-        flex-direction: column;
-    }
-        .column1 {
-            width: 100%;
-            min-height: 200px;
-    
-        }
-}
-
-/*=================================================================================================*/
-
+/* About Company Section */
 .about-company {
-    float: left;
-    width: 50%;
+    /* width: 50%; */
     color: #555454;
-    position: relative;
 }
 
 .about-company h1 {
     font-size: 25px;
-    text-align: left;
     padding-left: 20px;
-    padding-top: 10px;
 }
 
 .about-company p {
     font-size: 15px;
     line-height: 1.9em;
     padding: 20px;
-    text-align: justify;
 }
 
-
-/*=====================================================================*/
-
-.description .section {
-    /* padding-top: 30px;
-    padding-bottom: 30px; */
-}
-
-.description .section p {
-    margin-top: 7%;
-    text-align: center;
-    color: #555454;
-    padding: 20px
-}
-
-h1 {
-    margin-top: 0%;
-    text-align: center;
-    color: #555454;
-}
-
-.description .section h2 {
-    padding-top: 20px;
-    text-align: center;
-    color: #0174E1;
-}
-
-.description h1 {
-    padding-top: 3%
-}
-
-.description .section p {
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5em;
-    color: #3f3f3f;
-    text-align: justify;
-}
-
-.description .column {
-    float: left;
-    width: 23%;
-    margin: 1%;
-    border-radius: 10px;
-}
-
-hr.style-two {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(212, 157, 5, 0), rgba(12, 96, 107, 0.877), rgba(0, 0, 0, 0));
-}
-
+/* Responsive Styles */
 @media screen and (max-width: 767px) {
+    .column, .about-company, .bundle {
+        width: 100%;
+        flex-direction: column;
+    }
+
     .description .column {
         width: 90%;
         margin: 5%;
     }
-    .about-company {
-        width: 100%;
-    }
-    .description .section p {
-        padding: 10px;
-    }
 }
-.our-teams{
-    .background-div {
-        width: 100%;
-        background-image: url('https://www.ecoprops.co.za/images/slide-1.jpg');
-        background-size: cover;   /* Ensures the image covers the entire div */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Prevents repeating the image */
-        border-radius: 10px; /* Optional: rounded corners */
-      }
 
+/* Team Section */
+.our-teams .background-div {
+    width: 100%;
+    background-image: url('https://www.ecoprops.co.za/images/slide-1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Section Titles */
+.about-title, .section-title {
+    /* padding-top: 50px; */
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.company-name{
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+/*  */
+.profile-card-wrapper {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    /* background-color: #f8f9fa; */
+  }
+  .profile-card {
+    background-color: #fff;
+    /* width: 350px; */
+    margin: 5px;
+    /* border-radius: 12px; */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .profile-image img {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  }
+  .profile-caption {
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    color: #f1c40f;
+    font-weight: bold;
+  }
+  .profile-caption a {
+    color: #2ecc71;
+    text-decoration: none;
+  }
+  .profile-caption a:hover {
+    text-decoration: underline;
+  }
+  .profile-status {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: -20px;
+  }
+  .status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .add-button {
+    background-color: #e74c3c;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -10px;
+  }
+  .add-button:hover {
+    background-color: #c0392b;
+  }
+  .profile-info p {
+    margin: 10px 0;
+    color: #7f8c8d;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .quote {
+    font-size: 0.9em;
+  }
+  .profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .profile-stats div p:first-child {
+    color: #95a5a6;
+    font-size: 0.8em;
+  }
+  .profile-stats div p:last-child {
+    color: #3498db;
+    font-size: 1.2em;
+  }
+  .template-credit {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.8em;
+  }
+  .template-credit a {
+    color: #95a5a6;
+  }
+  .template-credit a:hover {
+    color: #2c3e50;
+  }
+  /*  */
+  .features-section{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 75px 20px;
+  }
+  .features-section .container{
+    padding: 30px;
+    margin: 20px 20px 20px -20px;
+  }
+  feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature fa-icon {
+    font-size: 25px;
+    color: #f5f5f7;
+ 
+  }
+  
+  .feature h2 {
+    font-size: 1.2rem;
+    color: #555454;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: serif;
+
+
+  }
+  
+  .feature p {
+    font-size: 15px;
+    color: #555454;
+    padding: 0px;
+    text-align: center;
+  }
+  .feature {
+    background-color: #f5f5f5;
+    padding: 10px 25px;
+    margin: 10px;
+  }
+  /*  */
+  /* General styles */
+
+
+.services-section {
+  background-color: #fff;
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-section .section-title {
+  margin-bottom: 50px;
+  font-size: 24px;
+  color: #007BFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: serif;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background-color: #007BFF;
+  padding: 20px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: serif;
+  
+}
+
+.service p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ececec;
 }
